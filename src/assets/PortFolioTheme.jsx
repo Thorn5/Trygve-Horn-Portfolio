@@ -7,10 +7,10 @@ export const PortFolioTheme = ({ children }) => {
   const theme = createTheme({
     palette: {
       primary: {
-        main: '#2196f3',
+        main: '#0099cc',
       },
       secondary: {
-        main: '#f50057',
+        main: '#009966',
       },
     },
     typography: {
