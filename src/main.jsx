@@ -6,10 +6,16 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import { PortFolioTheme } from './assets/PortFolioTheme.jsx';
+
+
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <PortFolioTheme>
+      <App />
+    </PortFolioTheme>
   </React.StrictMode>,
 )
