@@ -1,14 +1,20 @@
 // App.jsx
-
+// import React from 'react'
 import './App.css'
-import { HeaderBox } from './components/HeaderBox'
+import { ResponsiveAppBar_Light, MainContent_Light, PortFolioTheme } from './assets/PortFolioTheme.jsx';
+import { ResponsiveAppBar } from './components/ResponsiveAppBar'
 
 function App() {
   return (
     <>
-      <HeaderBox />
+      <PortFolioTheme theme={ResponsiveAppBar_Light}>
+        <ResponsiveAppBar />
+      </PortFolioTheme>
+      <PortFolioTheme theme={MainContent_Light}>
+        <ResponsiveAppBar />
+      </PortFolioTheme>
     </>
   )
 }
 
-export default App
+export default App;
