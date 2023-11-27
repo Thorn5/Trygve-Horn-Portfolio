@@ -1,17 +1,19 @@
 // App.jsx
 // import React from 'react'
 import './App.css'
-import { ResponsiveAppBar_Light, MainContent_Light, PortFolioTheme } from './assets/PortFolioTheme.jsx';
-import { ResponsiveAppBar } from './components/ResponsiveAppBar'
+import { HeaderAppBar_Light, MainContent_Light, PortFolioTheme } from './assets/PortFolioTheme.jsx';
+import { BodyBox } from './components/BodyBox.jsx';
+import { HeaderAppBar } from './components/HeaderAppBar.jsx'
+
 
 function App() {
   return (
     <>
-      <PortFolioTheme theme={ResponsiveAppBar_Light}>
-        <ResponsiveAppBar />
+      <PortFolioTheme theme={HeaderAppBar_Light}>
+        <HeaderAppBar />
       </PortFolioTheme>
       <PortFolioTheme theme={MainContent_Light}>
-        <ResponsiveAppBar />
+        <BodyBox />
       </PortFolioTheme>
     </>
   )

@@ -1,7 +1,7 @@
 // PortFolioTheme.jsx
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-export const ResponsiveAppBar_Light = createTheme({
+export const HeaderAppBar_Light = createTheme({
   palette: {
     // mode: 'light',
     primary: {
@@ -15,16 +15,16 @@ export const ResponsiveAppBar_Light = createTheme({
 });
 
 export const MainContent_Light = createTheme({
-  palette: {
-    // mode: 'light',
-    primary: {
-      main: '#676767',
-      contrastText: '#121212',
-    },
-  },
-  typography: {
-    fontFamily: 'Roboto, sans-serif',
-  },
+  // palette: {
+  //   // mode: 'light',
+  //   primary: {
+  //     main: '#676767',
+  //     contrastText: '#121212',
+  //   },
+  // },
+  // typography: {
+  //   fontFamily: 'Roboto, sans-serif',
+  // },
 });
 
 // eslint-disable-next-line react/prop-types

@@ -1,4 +1,4 @@
-// ResponsiveAppBar.jsx
+// HeaderAppBar.jsx
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -13,11 +13,13 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import AdbIcon from '@mui/icons-material/Adb';
+import AccessibleIcon from '@mui/icons-material/Accessible';
+import AccessibilityIcon from '@mui/icons-material/Accessibility';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Blip', 'Blop', 'Blog', 'Goz'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-export const ResponsiveAppBar = () => {
+export const HeaderAppBar = () => {
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -41,7 +43,11 @@ export const ResponsiveAppBar = () => {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+          
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <AccessibleIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 , color:'rgb(199, 10, 10)'}} />
+          <AccessibilityIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+
           <Typography
             variant="h6"
             noWrap
