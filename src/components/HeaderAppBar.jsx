@@ -13,7 +13,6 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import AdbIcon from '@mui/icons-material/Adb';
-import AccessibleIcon from '@mui/icons-material/Accessible';
 import AccessibilityIcon from '@mui/icons-material/Accessibility';
 
 const pages = ['Blip', 'Blop', 'Blog', 'Goz'];
@@ -41,14 +40,12 @@ export const HeaderAppBar = () => {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container 
+      // maxWidth="xl"
+      >
         <Toolbar disableGutters>
-          
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <AccessibleIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 , color:'rgb(199, 10, 10)'}} />
           <AccessibilityIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-
-          <Typography
+          <Typography // LOGO
             variant="h6"
             noWrap
             component="a"
@@ -65,7 +62,6 @@ export const HeaderAppBar = () => {
           >
             LOGO
           </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -73,7 +69,7 @@ export const HeaderAppBar = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="inherit" 
             >
               <MenuIcon />
             </IconButton>
@@ -165,27 +161,6 @@ export const HeaderAppBar = () => {
         </Toolbar>
       </Container>
     </AppBar>
-
-
-
-
-    // <Box
-    //   sx={{
-    //     display: 'flex',
-    //     // position: 'fixed',
-    //     alignItems: 'center',
-    //     justifyContent: 'center',
-    //     top: 0,
-    //     left: 0,
-    //     right: 0,
-    //     height: 64,
-    //     bgcolor: 'primary.main',
-    //     color: 'primary.contrastText',
-    //     zIndex: 9999,
-    //   }}
-    // >
-    //   <h2>Portfolio and Online CV of (Anthony) Trygve Horn</h2>
-    // </Box>
   )
 }
 

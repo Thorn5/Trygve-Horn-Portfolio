@@ -1,19 +1,20 @@
 // App.jsx
 // import React from 'react'
 import './App.css'
-import { HeaderAppBar_Light, MainContent_Light, PortFolioTheme } from './assets/PortFolioTheme.jsx';
-import { BodyBox } from './components/BodyBox.jsx';
+import { HeaderBar, MainContent, PortFolioTheme } from './assets/PortFolioTheme.jsx';
+import { BodyArea } from './components/BodyArea.jsx';
 import { HeaderAppBar } from './components/HeaderAppBar.jsx'
-
+import CssBaseline from '@mui/material/CssBaseline';
 
 function App() {
-  return (
+  return ( // Theme Nesting
     <>
-      <PortFolioTheme theme={HeaderAppBar_Light}>
+      <CssBaseline />
+      <PortFolioTheme theme={HeaderBar}>
         <HeaderAppBar />
-      </PortFolioTheme>
-      <PortFolioTheme theme={MainContent_Light}>
-        <BodyBox />
+        <PortFolioTheme theme={MainContent}>
+          <BodyArea />
+        </PortFolioTheme>
       </PortFolioTheme>
     </>
   )

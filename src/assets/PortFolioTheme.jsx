@@ -1,30 +1,36 @@
 // PortFolioTheme.jsx
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-export const HeaderAppBar_Light = createTheme({
+export const HeaderBar = createTheme({
   palette: {
-    // mode: 'light',
-    primary: {
-      main: '#6699cc',
-      contrastText: '#cc9966',
-    },  
+    mode: 'light',
   },
   typography: {
-    fontFamily: 'Roboto, sans-serif',
+    fontFamily: '"Red Hat Display", "Roboto", "Helvetica", "Arial", "sans-serif"',
   },
 });
 
-export const MainContent_Light = createTheme({
-  // palette: {
-  //   // mode: 'light',
-  //   primary: {
-  //     main: '#676767',
-  //     contrastText: '#121212',
-  //   },
-  // },
-  // typography: {
-  //   fontFamily: 'Roboto, sans-serif',
-  // },
+export const MainContent = createTheme({
+  palette: {
+    mode: 'light',
+    primary: {
+      main: '#1976d2',
+      primary: '#1f175a',
+    },
+    secondary: {
+      main: '#9c27b0',
+    },
+    background: {
+      default: '#326cce', //BackGround Color
+      paper: '#144db1',
+    },
+    text: {
+      primary: '#43a047', //light green
+    },
+  },
+  typography: {
+    fontFamily: '"Red Hat Display", "Roboto", "Helvetica", "Arial", "sans-serif"',
+  },
 });
 
 // eslint-disable-next-line react/prop-types
