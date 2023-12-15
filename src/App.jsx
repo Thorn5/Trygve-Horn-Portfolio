@@ -12,9 +12,9 @@ function App() {
       <CssBaseline />
       <PortFolioTheme theme={HeaderBar}>
         <HeaderAppBar />
-        <PortFolioTheme theme={MainContent}>
+        {/* <PortFolioTheme theme={MainContent}>
           <BodyArea />
-        </PortFolioTheme>
+        </PortFolioTheme> */}
       </PortFolioTheme>
     </>
   )
