@@ -5,8 +5,6 @@ export const HeaderBar = createTheme({
   components: { // fixes body text underrunning app-bar
     MuiToolbar: { styleOverrides: { dense: { height: 36, minHeight: 36 } } },
   },
-
-
   // palette: {
   //   mode: 'light',
   // },
