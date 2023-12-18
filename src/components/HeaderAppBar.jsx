@@ -1,5 +1,7 @@
 // HeaderAppBar.jsx
 import * as React from "react";
+import PropTypes from 'prop-types';
+import MenuIcon from "@mui/icons-material/Menu";
 import {
   AppBar,
   Toolbar,
@@ -10,9 +12,28 @@ import {
   Box,
   Menu,
   MenuItem,
+  Link,
+  Typography,
+  Box,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Paper,
+  Divider,
+  InboxIcon,
+  DraftsIcon,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import {
+  Link as RouterLink,
+  LinkProps as RouterLinkProps,
+  Route,
+  Routes,
+  MemoryRouter,
+  useLocation,
+} from 'react-router-dom';
+import { StaticRouter } from 'react-router-dom/server';
+
 
 const pages = ["About Me", "Online CV", "Projects", "Contact Me"];
 
@@ -26,6 +47,33 @@ export const HeaderAppBar = (props) => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  // Router Code:
+  function Router(props) {
+    const { children } = props;
+    if (typeof window === 'undefined') {
+      return <StaticRouter location="/drafts">{children}</StaticRouter>;
+    }
+  
+    return (
+      <MemoryRouter initialEntries={['/drafts']} initialIndex={0}>
+        {children}
+      </MemoryRouter>
+    );
+  }
+  
+  Router.propTypes = {
+    children: PropTypes.node,
+  };
+  
+  const Link = React.forwardRef(function Link(itemProps, ref) {
+    return <RouterLink ref={ref} {...itemProps} role={undefined} />;
+  });
+  
+  function ListItemLink(props) {
+    const { icon, primary, to } = props;
+
+    // End Router Code
 
   return (
     <>
