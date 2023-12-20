@@ -2,13 +2,13 @@
 import React from 'react'
 import "./App.css";
 import { HeaderBar, MainContent, PortFolioTheme, } from "./assets/PortFolioTheme.jsx";
-import { AboutMe } from "./components/AboutMe.jsx";
+import { AboutMe } from "./components/Pages/AboutMe.jsx";
 import { BodyArea } from "./components/BodyArea.jsx";
 import { HeaderAppBar } from "./components/HeaderAppBar.jsx";
 import CssBaseline from "@mui/material/CssBaseline";
-import { TrygveHornCV } from "./components/TrygveHornCV.jsx";
-import { Projects } from "./components/Projects.jsx";
-import { Contact } from "./components/Contact.jsx";
+import { TrygveHornCV } from "./components/Pages/TrygveHornCV.jsx";
+import { Projects } from "./components/Pages/Projects.jsx";
+import { Contact } from "./components/Pages/Contact.jsx";
 
 function App() {
   return (
@@ -19,10 +19,10 @@ function App() {
         <HeaderAppBar />
         <PortFolioTheme theme={MainContent}>
           <AboutMe />
-          <TrygveHornCV />
+          {/* <TrygveHornCV />
           <Projects />
           <Contact />
-          <BodyArea />
+          <BodyArea /> */}
         </PortFolioTheme>
       </PortFolioTheme>
     </>
