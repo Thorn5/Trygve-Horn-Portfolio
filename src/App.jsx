@@ -3,7 +3,7 @@ import React from 'react'
 import "./App.css";
 import { HeaderBar, MainContent, PortFolioTheme, } from "./assets/PortFolioTheme.jsx";
 import { AboutMe } from "./components/Pages/AboutMe.jsx";
-import { BodyArea } from "./components/BodyArea.jsx";
+import { BodyContent } from "./components/BodyContent.jsx";
 import { HeaderAppBar } from "./components/HeaderAppBar.jsx";
 import CssBaseline from "@mui/material/CssBaseline";
 import { TrygveHornCV } from "./components/Pages/TrygveHornCV.jsx";
@@ -22,7 +22,7 @@ function App() {
           {/* <TrygveHornCV />
           <Projects />
           <Contact />
-          <BodyArea /> */}
+          <BodyContent /> */}
         </PortFolioTheme>
       </PortFolioTheme>
     </>

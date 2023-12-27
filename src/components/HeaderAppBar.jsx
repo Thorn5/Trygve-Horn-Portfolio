@@ -12,7 +12,7 @@ const NavItem = ({ page, onClick }) => {
     return (
       <MenuItem key={page} onClick={() => {
         onClick();
-        // Update the BodyArea component
+        // Update the BodyContent component
         dispatch({ type: 'NAVIGATE_TO', page: page });
       }}>
         <Link
@@ -92,7 +92,7 @@ export const HeaderAppBar = () => {
 //   return (
 //     <MenuItem key={page} onClick={() => {
 //       onClick();
-//       // Update the BodyArea component
+//       // Update the BodyContent component
 //       dispatch({ type: 'NAVIGATE_TO', page: page });
 //     }}>
 //       <Link
