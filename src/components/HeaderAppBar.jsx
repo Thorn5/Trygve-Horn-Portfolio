@@ -1,88 +1,7 @@
-// // HeaderAppBar.jsx Obselete Version
-// import * as React from "react";
-// import MenuIcon from "@mui/icons-material/Menu";
-// import { AppBar, Toolbar, Button, IconButton, Typography, CssBaseline, Box, Menu, MenuItem, Link, } from "@mui/material";
-
-// const pages = ["About Me", "Online CV", "Projects", "Contact Me"];
-
-// const NavItem = ({ page, onClick }) => {
-//     return (
-//       <MenuItem key={page} onClick={() => {
-//         onClick();
-//         // Update the BodyContent component
-//         dispatch({ type: 'NAVIGATE_TO', page: page });
-//       }}>
-//         <Link
-//           to={"/" + page.replace(/\s/g, "").toLowerCase()}
-//           underline="hover"
-//           className="nav-link"
-//         >
-//           {page}
-//         </Link>
-//       </MenuItem>
-//     );
-//   };
-
-// export const HeaderAppBar = () => {
-//     const [anchorElNav, setAnchorElNav] = React.useState(null);
-//     const handleOpenNavMenu = (event) => {
-//         setAnchorElNav(event.currentTarget);
-//     };
-
-//     const handleCloseNavMenu = () => {
-//         setAnchorElNav(null);
-//     };
-
-//     return (
-//         <>
-//             <>
-//                 <CssBaseline />
-//                 <Box sx={{ flexGrow: 1 }}>
-//                     <AppBar position="fixed" sx={{ maxWidth: "98%", left: "50%", transform: "translateX(-50%)", top: "0px", }}>
-//                         <Toolbar>
-//                             <IconButton size="large" edge="start" color="inherit" aria-label="menu" onClick={handleOpenNavMenu} sx={{ mr: 2 }} >
-//                                 <MenuIcon />
-//                             </IconButton>
-// <Box >
-//     <Menu id="menu-appbar" anchorEl={anchorElNav} anchorOrigin={{ vertical: "bottom", horizontal: "left", }} keepMounted transformOrigin={{ vertical: "top", horizontal: "left", }} open={Boolean(anchorElNav)} onClose={handleCloseNavMenu} >
-//         {pages.map((page) => (
-//             <MenuItem key={page} onClick={handleCloseNavMenu}>
-//                 <Link
-//                     underline="hover" to={"/" + page.replace(/\s/g, "").toLowerCase()}>{page}</Link>
-//             </MenuItem>
-//         ))}
-//     </Menu>
-// </Box>
-//                             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-//                                 News
-//                             </Typography>
-//                             <Button color="inherit">Login</Button>
-//                         </Toolbar>
-//                     </AppBar>
-//                     <Toolbar variant="dense" />
-//                 </Box>
-//             </>
-//         </>
-//     );
-// };
-
 // HeaderAppBar.jsx
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
+import { AppBar, Toolbar, IconButton, Typography, CssBaseline, Box, Menu, MenuItem, Link, } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import CssBaseline from "@mui/material/CssBaseline";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import Tooltip from "@mui/material/Tooltip";
-import AdbIcon from "@mui/icons-material/Adb";
-
 
 export const HeaderAppBar = () => {
 
@@ -94,7 +13,6 @@ export const HeaderAppBar = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
   return (
     <>
       <CssBaseline />
