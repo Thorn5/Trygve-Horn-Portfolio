@@ -1,33 +1,24 @@
 // PortFolioTheme.jsx
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-export const HeaderBar = createTheme({
+export const Theme = createTheme({
   components: { // fixes body text underrunning app-bar
     MuiToolbar: { styleOverrides: { dense: { height: 36, minHeight: 36 } } },
   },
-  // typography: {
-  //   fontFamily: '"Red Hat Display", "Roboto", "Helvetica", "Arial", "sans-serif"',
-  // },
-});
-
-export const MainContent = createTheme({
-  // palette: {
-  //   mode: 'light',
-  //   primary: {
-  //     main: '#1976d2',
-  //     primary: '#1f175a',
-  //   },
-  //   secondary: {
-  //     main: '#9c27b0',
-  //   },
-  //   background: {
-  //     default: '#326cce', //BackGround Color
-  //     paper: '#144db1',
-  //   },
-  //   text: {
-  //     primary: '#43a047', //light green
-  //   },
-  // },
+  palette: {
+    mode: 'light',
+    primary: {
+      main: '#46bbec',
+      contrastText: '#5ef75e',
+    },
+    secondary: {
+      main: '#f50057',
+    },
+    background: {
+      paper: '#c8d0dc',
+      default: '#787b81',
+    },
+  },
   // typography: {
   //   fontFamily: '"Red Hat Display", "Roboto", "Helvetica", "Arial", "sans-serif"',
   // },
