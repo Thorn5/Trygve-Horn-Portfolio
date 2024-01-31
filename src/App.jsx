@@ -1,32 +1,35 @@
 // App.jsx
 import React from 'react'
 import "./App.css";
-import { HeaderBar, MainContent, PortFolioTheme, } from "./assets/PortFolioTheme.jsx";
-import { AboutMe } from "./components/Pages/AboutMe.jsx";
-import { BodyContent } from "./components/BodyContent.jsx";
-import { HeaderAppBar } from "./components/HeaderAppBar.jsx";
 import CssBaseline from "@mui/material/CssBaseline";
-import { TrygveHornCV } from "./components/Pages/TrygveHornCV.jsx";
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Theme, PortFolioTheme, } from "./assets/PortFolioTheme.jsx";
+import { HeaderAppBar } from "./components/HeaderAppBar.jsx";
+import { AboutMe } from "./components/Pages/AboutMe.jsx";
 import { Projects } from "./components/Pages/Projects.jsx";
+import { TrygveHornCV } from "./components/Pages/TrygveHornCV.jsx";
 import { Contact } from "./components/Pages/Contact.jsx";
+
+
 
 function App() {
   return (
-    // Theme Nesting
     <>
       <CssBaseline />
-      <PortFolioTheme theme={HeaderBar}>
-        <HeaderAppBar />
-        <PortFolioTheme theme={MainContent}>
-          <AboutMe />
-          {/* <TrygveHornCV />
-          <Projects />
-          <Contact />
-          <BodyContent /> */}
+      <BrowserRouter>
+        <PortFolioTheme theme={Theme}>
+          <HeaderAppBar />
+          <Routes>
+            <Route exact path="/" element={<AboutMe />} />
+            <Route exact path="/Projects" element={<Projects />} />
+            <Route exact path="/TrygveHornCV" element={<TrygveHornCV />} />
+            <Route exact path="/Contact" element={<Contact />} />
+          </Routes>
         </PortFolioTheme>
-      </PortFolioTheme>
+      </BrowserRouter>
     </>
   );
 }
 
 export default App;
+
