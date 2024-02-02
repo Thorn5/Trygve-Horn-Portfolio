@@ -16,17 +16,33 @@ export const HeaderAppBar = () => {
   const handleClose = (link) => {
     setSelectedLink(link);
     setAnchorEl(null);
-    console.log(selectedLink);
-    console.log(link);
   };
 
   return (
     <>
       <CssBaseline />
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="fixed" sx={{ maxWidth: "98%", left: "50%", transform: "translateX(-50%)", top: "0px", }} >
+        <AppBar
+          position="fixed"
+          sx={{
+            maxWidth: "98%",
+            left: "50%",
+            transform: "translateX(-50%)",
+            top: "0px",
+          }}
+        >
           <Toolbar>
-            <IconButton size="large" edge="start" color="inherit" aria-label="menu" onClick={handleClick} sx={{ mr: 2 }}> <MenuIcon /> </IconButton>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              onClick={handleClick}
+              sx={{ mr: 2 }}
+            >
+              {" "}
+              <MenuIcon />{" "}
+            </IconButton>
             <Box>
               <nav>
                 <Menu // creates Popover menu containing MenuItems
@@ -34,37 +50,62 @@ export const HeaderAppBar = () => {
                   anchorEl={anchorEl}
                   open={open}
                   onClose={handleClose}
-                  MenuListProps={{ "aria-labelledby": "basic-button" }} >
+                  MenuListProps={{ "aria-labelledby": "basic-button" }}
+                >
                   <MenuItem
                     sx={{ "&:hover": { textDecoration: "underline" } }}
-                    // component={Link}
                     component={NavLink}
+                    style={({ isActive }) => {
+                      return {
+                        fontWeight: isActive ? "bold" : "",
+                        color: isActive ? "black" : "grey",
+                      };
+                    }}
                     to="/"
-                    onClick={() => handleClose("/AboutMe")} >
+                    onClick={() => handleClose("/AboutMe")}
+                  >
                     About Me
                   </MenuItem>
                   <MenuItem
                     sx={{ "&:hover": { textDecoration: "underline" } }}
-                    // component={Link}
                     component={NavLink}
+                    style={({ isActive }) => {
+                      return {
+                        fontWeight: isActive ? "bold" : "",
+                        color: isActive ? "black" : "grey",
+                      };
+                    }}
                     to="/Projects"
-                    onClick={() => handleClose("/Projects")} >
+                    onClick={() => handleClose("/Projects")}
+                  >
                     Projects
                   </MenuItem>
                   <MenuItem
                     sx={{ "&:hover": { textDecoration: "underline" } }}
-                    // component={Link}
                     component={NavLink}
+                    style={({ isActive }) => {
+                      return {
+                        fontWeight: isActive ? "bold" : "",
+                        color: isActive ? "black" : "grey",
+                      };
+                    }}
                     to="/TrygveHornCV"
-                    onClick={() => handleClose("/TrygveHornCV")} >
+                    onClick={() => handleClose("/TrygveHornCV")}
+                  >
                     Online CV
                   </MenuItem>
                   <MenuItem
                     sx={{ "&:hover": { textDecoration: "underline" } }}
-                    // component={Link}
                     component={NavLink}
+                    style={({ isActive }) => {
+                      return {
+                        fontWeight: isActive ? "bold" : "",
+                        color: isActive ? "black" : "grey",
+                      };
+                    }}
                     to="/Contact"
-                    onClick={() => handleClose("/Contact")} >
+                    onClick={() => handleClose("/Contact")}
+                  >
                     Contact Me
                   </MenuItem>
                 </Menu>
@@ -76,7 +117,7 @@ export const HeaderAppBar = () => {
           </Toolbar>
         </AppBar>
         <Toolbar variant="dense" />
-      </Box >
+      </Box>
     </>
   );
 };
