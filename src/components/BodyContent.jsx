@@ -15,10 +15,10 @@ export const BodyContent = () => {
       <CssBaseline />
       <Box sx={{ height: "100vh" }}>
         <Routes>
-          <Route exact path="/" element={<Landing />} />
-          <Route exact path="/Projects" element={<Projects />} />
-          <Route exact path="/TrygveHornCV" element={<TrygveHornCV />} />
-          <Route exact path="/Contact" element={<Contact />} />
+          <Route path="/" element={<Landing />} />
+          <Route path="/Projects" element={<Projects />} />
+          <Route path="/TrygveHornCV" element={<TrygveHornCV />} />
+          <Route path="/Contact" element={<Contact />} />
         </Routes>
       </Box>
     </>
