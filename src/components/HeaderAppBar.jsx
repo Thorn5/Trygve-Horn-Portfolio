@@ -2,7 +2,7 @@
 // /* eslint-disable jsx-a11y/anchor-is-valid */
 import * as React from "react";
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AppBar, Toolbar, IconButton, Typography, CssBaseline, Box, Menu, MenuItem, } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -52,27 +52,41 @@ export const HeaderAppBar = () => {
                   onClose={handleClose}
                   MenuListProps={{ "aria-labelledby": "basic-button" }}
                 >
-                  <MenuItem
+                  <MenuItem // Landing
                     sx={{ "&:hover": { textDecoration: "underline" } }}
                     component={NavLink}
                     style={({ isActive }) => {
                       return {
                         fontWeight: isActive ? "bold" : "",
-                        color: isActive ? "black" : "grey",
+                        // color: isActive ? "black" : "grey",
                       };
                     }}
                     to="/"
                     onClick={() => handleClose("/AboutMe")}
                   >
-                    About Me
+                    Home/ Landing
                   </MenuItem>
-                  <MenuItem
+                  <MenuItem // AboutMe
                     sx={{ "&:hover": { textDecoration: "underline" } }}
                     component={NavLink}
                     style={({ isActive }) => {
                       return {
                         fontWeight: isActive ? "bold" : "",
-                        color: isActive ? "black" : "grey",
+                        // color: isActive ? "black" : "grey",
+                      };
+                    }}
+                    to="/AboutMe"
+                    onClick={() => handleClose("/AboutMe")}
+                  >
+                    About Me
+                  </MenuItem>
+                  <MenuItem // Projects
+                    sx={{ "&:hover": { textDecoration: "underline" } }}
+                    component={NavLink}
+                    style={({ isActive }) => {
+                      return {
+                        fontWeight: isActive ? "bold" : "",
+                        // color: isActive ? "black" : "grey",
                       };
                     }}
                     to="/Projects"
@@ -80,13 +94,13 @@ export const HeaderAppBar = () => {
                   >
                     Projects
                   </MenuItem>
-                  <MenuItem
+                  <MenuItem // TrygveHornCV
                     sx={{ "&:hover": { textDecoration: "underline" } }}
                     component={NavLink}
                     style={({ isActive }) => {
                       return {
                         fontWeight: isActive ? "bold" : "",
-                        color: isActive ? "black" : "grey",
+                        // color: isActive ? "black" : "grey",
                       };
                     }}
                     to="/TrygveHornCV"
@@ -94,13 +108,27 @@ export const HeaderAppBar = () => {
                   >
                     Online CV
                   </MenuItem>
-                  <MenuItem
+                  <MenuItem // AboutSite
                     sx={{ "&:hover": { textDecoration: "underline" } }}
                     component={NavLink}
                     style={({ isActive }) => {
                       return {
                         fontWeight: isActive ? "bold" : "",
-                        color: isActive ? "black" : "grey",
+                        // color: isActive ? "black" : "grey",
+                      };
+                    }}
+                    to="/AboutSite"
+                    onClick={() => handleClose("/AboutSite")}
+                  >
+                    About This Site
+                  </MenuItem>
+                  <MenuItem // Contact
+                    sx={{ "&:hover": { textDecoration: "underline" } }}
+                    component={NavLink}
+                    style={({ isActive }) => {
+                      return {
+                        fontWeight: isActive ? "bold" : "",
+                        // color: isActive ? "black" : "grey",
                       };
                     }}
                     to="/Contact"
