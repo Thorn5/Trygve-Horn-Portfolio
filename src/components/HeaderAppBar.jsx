@@ -80,20 +80,6 @@ export const HeaderAppBar = () => {
                   >
                     About Me
                   </MenuItem>
-                  <MenuItem // Projects
-                    sx={{ "&:hover": { textDecoration: "underline" } }}
-                    component={NavLink}
-                    style={({ isActive }) => {
-                      return {
-                        fontWeight: isActive ? "bold" : "",
-                        // color: isActive ? "black" : "grey",
-                      };
-                    }}
-                    to="/Projects"
-                    onClick={() => handleClose("/Projects")}
-                  >
-                    Projects
-                  </MenuItem>
                   <MenuItem // TrygveHornCV
                     sx={{ "&:hover": { textDecoration: "underline" } }}
                     component={NavLink}
@@ -107,6 +93,20 @@ export const HeaderAppBar = () => {
                     onClick={() => handleClose("/TrygveHornCV")}
                   >
                     Online CV
+                  </MenuItem>
+                  <MenuItem // Projects
+                    sx={{ "&:hover": { textDecoration: "underline" } }}
+                    component={NavLink}
+                    style={({ isActive }) => {
+                      return {
+                        fontWeight: isActive ? "bold" : "",
+                        // color: isActive ? "black" : "grey",
+                      };
+                    }}
+                    to="/Projects"
+                    onClick={() => handleClose("/Projects")}
+                  >
+                    Projects
                   </MenuItem>
                   <MenuItem // AboutSite
                     sx={{ "&:hover": { textDecoration: "underline" } }}

@@ -18,8 +18,8 @@ export const BodyContent = () => {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/AboutMe" element={<AboutMe />} />
-          <Route path="/Projects" element={<Projects />} />
           <Route path="/TrygveHornCV" element={<TrygveHornCV />} />
+          <Route path="/Projects" element={<Projects />} />
           <Route path="/AboutSite" element={<AboutSite />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
