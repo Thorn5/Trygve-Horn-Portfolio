@@ -14,7 +14,9 @@ export const BodyContent = () => {
   return (
     <>
       <CssBaseline />
-      <Box sx={{ height: "100vh" }}>
+      <Box 
+      // sx={{ height: "100vh" }}
+      >
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/AboutMe" element={<AboutMe />} />

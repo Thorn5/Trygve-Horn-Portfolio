@@ -62,7 +62,7 @@ export const HeaderAppBar = () => {
                       };
                     }}
                     to="/"
-                    onClick={() => handleClose("/AboutMe")}
+                    onClick={() => handleClose("/")}
                   >
                     Home/ Landing
                   </MenuItem>
