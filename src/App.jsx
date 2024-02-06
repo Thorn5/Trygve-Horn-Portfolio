@@ -1,5 +1,5 @@
 // App.jsx
-import React from 'react'
+// import React from 'react'
 import "./App.css";
 import { FetchApiData } from './assets/Fetch/FetchApiData.jsx';
 import CssBaseline from "@mui/material/CssBaseline";
@@ -10,7 +10,7 @@ import { BodyContent } from "./components/BodyContent.jsx";
 
 
 function App() {
-  FetchApiData();
+  FetchApiData(); //! using Mock data
   return (
     <>
       <CssBaseline />
