@@ -7,6 +7,7 @@ export const TrygveHornCV = () => {
       <iframe
         style={{ width: "100%", height: "calc(100vh - 108px)", }}
         src= {import.meta.env.VITE_APP_CV_PDF}
+        {...console.log(import.meta.env.VITE_APP_CV_PDF)}
       >
       </iframe>
     </div>
