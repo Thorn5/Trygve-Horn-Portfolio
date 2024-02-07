@@ -10,18 +10,19 @@ import { NotFound } from "./Pages/NotFound.jsx";
 import { AboutSite } from "./Pages/AboutSite.jsx";
 
 export const BodyContent = () => {
+
   return (
     <>
       <CssBaseline />
-      <Container>
+      <Container> 
         <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/AboutMe" element={<AboutMe />} />
-          <Route path="/TrygveHornCV" element={<TrygveHornCV />} />
-          <Route path="/Projects" element={<Projects />} />
-          <Route path="/AboutSite" element={<AboutSite />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<Landing id='Landing'/>} />
+          <Route path="/AboutMe" element={<AboutMe id='AboutMe'/>} />
+          <Route path="/TrygveHornCV" element={<TrygveHornCV id='TrygveHornCV' />} />
+          <Route path="/Projects" element={<Projects id='Projects'/>} />
+          <Route path="/AboutSite" element={<AboutSite id='AboutSite'/>} />
+          <Route path="/Contact" element={<Contact id='Contact'/>} />
+          <Route path="*" element={<NotFound id='NotFound' />} />
         </Routes>
       </Container>
     </>
