@@ -1,7 +1,5 @@
 // TrygveHornCV.jsx
 // import React from 'react'
-// import { useState } from 'react';
-import { AppBar, Toolbar, IconButton, Typography, CssBaseline, Box, Menu, MenuItem, } from "@mui/material";
 
 export const TrygveHornCV = () => {
   return (

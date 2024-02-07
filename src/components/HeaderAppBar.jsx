@@ -1,7 +1,6 @@
 // HeaderAppBar.jsx
 // /* eslint-disable jsx-a11y/anchor-is-valid */
 import * as React from "react";
-// import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import {
   AppBar,
@@ -17,15 +16,12 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 export const HeaderAppBar = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
-  // const [selectedLink, setSelectedLink] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () =>
-    // link
     {
-      // setSelectedLink(link);
       setAnchorEl(null);
     };
 
