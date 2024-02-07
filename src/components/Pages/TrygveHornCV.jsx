@@ -6,7 +6,7 @@ export const TrygveHornCV = () => {
     <div>
       <iframe
         style={{ width: "100%", height: "calc(100vh - 108px)", }}
-        src="../src/assets/Pdf/Curriculum Vitae - A. Trygve Horn.pdf"
+        src= {import.meta.env.VITE_APP_CV_PDF}
       >
       </iframe>
     </div>
