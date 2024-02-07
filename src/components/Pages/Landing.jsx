@@ -102,9 +102,9 @@ export const Landing = () => {
           sx={{ width: "98%", textAlign: "left", }}
         >
           <h3>Welcome to my Portfolio!</h3>
-            <DisplayLocation />
-            <DisplayTime />
-            <DisplayWeather />
+          <DisplayLocation />
+          <DisplayTime />
+          <DisplayWeather />
           <Intro />
         </Container>
       </>

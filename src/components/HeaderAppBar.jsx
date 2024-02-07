@@ -3,7 +3,16 @@
 import * as React from "react";
 // import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { AppBar, Toolbar, IconButton, Typography, CssBaseline, Box, Menu, MenuItem, } from "@mui/material";
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  CssBaseline,
+  Box,
+  Menu,
+  MenuItem,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
 export const HeaderAppBar = () => {
@@ -13,12 +22,12 @@ export const HeaderAppBar = () => {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = (
+  const handleClose = () =>
     // link
-    ) => {
-    // setSelectedLink(link);
-    setAnchorEl(null);
-  };
+    {
+      // setSelectedLink(link);
+      setAnchorEl(null);
+    };
 
   return (
     <>
@@ -94,7 +103,7 @@ export const HeaderAppBar = () => {
                     to="/TrygveHornCV"
                     onClick={() => handleClose("/TrygveHornCV")}
                   >
-                    Online CV
+                    Curriculum Vitae
                   </MenuItem>
                   <MenuItem // Projects
                     sx={{ "&:hover": { textDecoration: "underline" } }}

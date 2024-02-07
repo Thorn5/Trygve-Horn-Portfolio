@@ -6,14 +6,11 @@ import { AppBar, Toolbar, IconButton, Typography, CssBaseline, Box, Menu, MenuIt
 export const TrygveHornCV = () => {
   return (
     <div>
-      {/* <iframe src="../src/assets/Pdf/Curriculum Vitae - A. Trygve Horn.pdf" width="100%" height="500px" > </iframe> */}
-      {/* <Box style={{height: "calc(100vh - 100px)"}}> */}
-       <iframe
-     src="../src/assets/Pdf/Curriculum Vitae - A. Trygve Horn.pdf"
-     style={{ width: "100%", height: "calc(100vh - 108px)" }}
-     >
-   </iframe>
-     {/* </Box> */}
+      <iframe
+        style={{ width: "100%", height: "calc(100vh - 108px)", }}
+        src="../src/assets/Pdf/Curriculum Vitae - A. Trygve Horn.pdf"
+      >
+      </iframe>
     </div>
   )
 }
