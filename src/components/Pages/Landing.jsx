@@ -99,14 +99,12 @@ export const Landing = () => {
       <>
         <CssBaseline />
         <Container
-          sx={{ /*padding: 2, */ width: "98%", textAlign: "left", }}
+          sx={{ width: "98%", textAlign: "left", }}
         >
           <h3>Welcome to my Portfolio!</h3>
-          <span>
             <DisplayLocation />
-            <DisplayTime /> {/* todo make dynamic */}
+            <DisplayTime />
             <DisplayWeather />
-          </span>
           <Intro />
         </Container>
       </>
