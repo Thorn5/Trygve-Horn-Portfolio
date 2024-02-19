@@ -87,11 +87,9 @@ export const Landing = () => {
           sx={{ width: "98%", textAlign: "left", }}
         >
           <h3>Welcome to my Portfolio!</h3>
-          <div style={{ display: 'flex', flexDirection: 'row' }}>
             <DisplayLocation />
             <DisplayTime />
             <DisplayWeather />
-          </div>
           <Intro />
         </Container>
       </>
