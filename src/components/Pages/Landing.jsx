@@ -3,35 +3,21 @@
 import { useState, useEffect } from 'react';
 import { CssBaseline, Container, /*Box*/ } from "@mui/material";
 
-export const DisplayLocation = () => {
+const DisplayLocation = () => {
   const ipDataString = sessionStorage.getItem("ipData");
   const ipData = JSON.parse(ipDataString);
   if (ipData && Object.keys(ipData).length > 0) {
     return (
       <>
         <div>
-          It looks like you are in or near {ipData.city}, {ipData.country_name},
+          It looks like you are in or near {ipData.city}, {ipData.country_name},&nbsp;
         </div>
       </>
     );
   }
 };
 
-// export const DisplayTime = () => {
-//   const ipDataString = sessionStorage.getItem("ipData");
-//   const ipData = JSON.parse(ipDataString);
-
-//   if (ipData && Object.keys(ipData).length > 0) {
-//     const localeTime = new Date().toLocaleTimeString(`en-US`, { timeZone: ipData.timezone, });
-//     return (
-//       <>
-//         <div>where the time is {localeTime},</div>
-//       </>
-//     );
-//   }
-// };
-
-export const DisplayTime = () => {
+const DisplayTime = () => {
   const ipDataString = sessionStorage.getItem('ipData');
   const ipData = JSON.parse(ipDataString);
   const [time, setTime] = useState(new Date().toLocaleTimeString(`en-US`, { timeZone: ipData.timezone, }));
@@ -46,12 +32,12 @@ export const DisplayTime = () => {
 
   return (
     <div>
-      <div>where the time is {time},</div>
+      <div>where the time is {time},&nbsp;</div>
     </div>
   );
 };
 
-export const DisplayWeather = () => {
+const DisplayWeather = () => {
   const weatherDataString = sessionStorage.getItem("weatherData");
   const weatherData = JSON.parse(weatherDataString);
 
@@ -66,7 +52,7 @@ export const DisplayWeather = () => {
   }
 };
 
-export const Intro = () => {
+const Intro = () => {
   return (
     <>
       <p>
@@ -86,7 +72,6 @@ export const Intro = () => {
         To learn more about me or this project, click on the hamburger menu on
         the left of the Title Bar and select a topic of interest.
       </p>
-      <h3>Todo: add Picture of me</h3>
     </>
   );
 };
@@ -102,12 +87,16 @@ export const Landing = () => {
           sx={{ width: "98%", textAlign: "left", }}
         >
           <h3>Welcome to my Portfolio!</h3>
-          <DisplayLocation />
-          <DisplayTime />
-          <DisplayWeather />
+          <div style={{ display: 'flex', flexDirection: 'row' }}>
+            <DisplayLocation />
+            <DisplayTime />
+            <DisplayWeather />
+          </div>
           <Intro />
         </Container>
       </>
     );
   }
 };
+
+

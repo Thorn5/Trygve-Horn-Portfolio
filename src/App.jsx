@@ -1,6 +1,5 @@
 // App.jsx
 // import React from 'react'
-import "./App.css";
 import { FetchApiData } from './assets/Fetch/FetchApiData.jsx';
 import CssBaseline from "@mui/material/CssBaseline";
 import { BrowserRouter } from 'react-router-dom';
@@ -10,7 +9,7 @@ import { BodyContent } from "./components/BodyContent.jsx";
 
 
 function App() {
-  FetchApiData(); //! using Mock data
+  FetchApiData();
   return (
     <>
       <CssBaseline />

@@ -3,12 +3,15 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 export const HeaderBar = createTheme({
   components: { // fixes body text underrunning app-bar
-    MuiToolbar: { styleOverrides: { dense: { height: 36, minHeight: 36 } } },
+    MuiToolbar: { styleOverrides: { dense: { 
+      height: 75, 
+      minHeight: 75,
+      paddingTop: 0,
+    } } },
   },
 });
 
 export const MainContent = createTheme({
-  // palette: { mode: 'dark', },
 });
 
 
