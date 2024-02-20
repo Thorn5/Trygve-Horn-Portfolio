@@ -1,7 +1,7 @@
 // Landing.jsx
 // import React from "react";
-import { useState, useEffect } from 'react';
-import { CssBaseline, Container, /*Box*/ } from "@mui/material";
+import { useState, useEffect } from "react";
+import { CssBaseline, Container } from "@mui/material";
 
 const DisplayLocation = () => {
   const ipDataString = sessionStorage.getItem("ipData");
@@ -9,32 +9,31 @@ const DisplayLocation = () => {
   if (ipData && Object.keys(ipData).length > 0) {
     return (
       <>
-        <div>
-          It looks like you are in or near {ipData.city}, {ipData.country_name},&nbsp;
-        </div>
+        It looks like you are in or near {ipData.city}, {ipData.country_name}
+        ,&nbsp;
       </>
     );
   }
 };
 
 const DisplayTime = () => {
-  const ipDataString = sessionStorage.getItem('ipData');
+  const ipDataString = sessionStorage.getItem("ipData");
   const ipData = JSON.parse(ipDataString);
-  const [time, setTime] = useState(new Date().toLocaleTimeString(`en-US`, { timeZone: ipData.timezone, }));
+  const [time, setTime] = useState(
+    new Date().toLocaleTimeString(`en-US`, { timeZone: ipData.timezone })
+  );
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      const newTime = new Date().toLocaleTimeString('en-US', { timeZone: ipData.timezone });
+      const newTime = new Date().toLocaleTimeString("en-US", {
+        timeZone: ipData.timezone,
+      });
       setTime(newTime);
     }, 1000);
     return () => clearInterval(intervalId);
   }, [ipData, time]);
 
-  return (
-    <div>
-      <div>where the time is {time},&nbsp;</div>
-    </div>
-  );
+  return <>where the time is {time},&nbsp;</>;
 };
 
 const DisplayWeather = () => {
@@ -42,38 +41,8 @@ const DisplayWeather = () => {
   const weatherData = JSON.parse(weatherDataString);
 
   if (weatherData && Object.keys(weatherData).length > 0) {
-    return (
-      <>
-        <div>
-          and the weather is {weatherData.currentConditions.conditions}.
-        </div>
-      </>
-    );
+    return <>and the weather is {weatherData.currentConditions.conditions}.</>;
   }
-};
-
-const Intro = () => {
-  return (
-    <>
-      <p>
-        My name is
-        {/* A. Trygve Horn */}
-        <a
-          href="http://localhost:5173/AboutMe"
-          target="_self"
-          rel="noopener noreferrer"
-        >
-          {" "}
-          A. Trygve Horn
-        </a>
-        , originally from Cape town, South Africa, and now in Solingen, Germany.{" "}
-      </p>
-      <p>
-        To learn more about me or this project, click on the hamburger menu on
-        the left of the Title Bar and select a topic of interest.
-      </p>
-    </>
-  );
 };
 
 export const Landing = () => {
@@ -83,18 +52,28 @@ export const Landing = () => {
     return (
       <>
         <CssBaseline />
-        <Container
-          sx={{ width: "98%", textAlign: "left", }}
-        >
+        <Container sx={{ width: "98%", textAlign: "left" }}>
           <h3>Welcome to my Portfolio!</h3>
-            <DisplayLocation />
-            <DisplayTime />
-            <DisplayWeather />
-          <Intro />
+          <DisplayLocation />
+          <DisplayTime />
+          <DisplayWeather />
+          <p>My name is<a
+            href="http://localhost:5173/AboutMe"
+            target="_self"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            A. Trygve Horn
+          </a>
+            , originally from Cape town, South Africa, and now living in Solingen,
+            Germany.
+          </p>
+          <p>
+            To learn more about me or this project, click on the hamburger menu on
+            the left of the Title Bar and select a topic of interest.
+          </p>
         </Container>
       </>
     );
   }
 };
-
-
