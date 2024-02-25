@@ -57,19 +57,23 @@ export const Landing = () => {
           <DisplayLocation />
           <DisplayTime />
           <DisplayWeather />
-          <p>My name is<a
-            href="http://localhost:5173/AboutMe"
-            target="_self"
-            rel="noopener noreferrer"
-          >
-            {" "}
-            A. Trygve Horn
-          </a>
-            , originally from Cape town, South Africa, and now living in Solingen,
+          <p>My name is{" "}
+            <a
+              href="http://localhost:5173/AboutMe"
+              target="_self"
+              rel="noopener noreferrer">
+              A. Trygve Horn
+            </a>, originally from Cape town, South Africa, and now living in Solingen,
             Germany.
           </p>
           <p>
-            To learn more about me or this project, click on the hamburger menu on
+            To learn more about me or{" "}
+            <a
+              href="http://localhost:5173/AboutSite"
+              target="_self"
+              rel="noopener noreferrer">
+              this project
+            </a>, click on the hamburger menu on
             the left of the Title Bar and select a topic of interest.
           </p>
         </Container>
