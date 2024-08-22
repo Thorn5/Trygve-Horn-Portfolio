@@ -26,6 +26,3 @@ function App() {
 }
 
 export default App;
-
-//todo Add pictures, add German version
-
