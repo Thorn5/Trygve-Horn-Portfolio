@@ -4,20 +4,18 @@ import { useState, useEffect } from "react";
 import { CssBaseline, Container } from "@mui/material";
 import { FetchApiData } from "../../assets/Fetch/FetchApiData";
 
-const DisplayLocation = () => {
+const DisplayLocation = (ipData) => {
   // const ipDataString = sessionStorage.getItem("ipData");
   // const ipData = JSON.parse(ipDataString);
-  if (ipData && Object.keys(ipData).length > 0) {
-    return (
-      <>
-        It looks like you are in or near {ipData.city}, {ipData.country_name}
-        ,&nbsp;
-      </>
-    );
-  }
+  return (
+    <>
+      It looks like you are in or near {ipData.city}, {ipData.country_name}
+      ,&nbsp;
+    </>
+  );
 };
 
-const DisplayTime = () => {
+const DisplayTime = (ipData) => {
   // const ipDataString = sessionStorage.getItem("ipData");
   // const ipData = JSON.parse(ipDataString);
   const [time, setTime] = useState(
@@ -37,16 +35,17 @@ const DisplayTime = () => {
   return <>where the time is {time},&nbsp;</>;
 };
 
-const DisplayWeather = () => {
+const DisplayWeather = (weatherData) => {
   // const weatherDataString = sessionStorage.getItem("weatherData");
   // const weatherData = JSON.parse(weatherDataString);
-  if (weatherData && Object.keys(weatherData).length > 0) {
-    return <>and the weather is {weatherData.currentConditions.conditions}.</>;
-  }
+  return <>and the weather is {weatherData.currentConditions.conditions}.</>;
 };
 
 export const Landing = () => {
-  // const { loading, errorEnglishIp, errorGermanIp, errorEnglishWeather, errorGermanWeather, ipData, ipDataDE, weatherData, weatherData_de, } = FetchApiData();
+  const { loading, errorEnglishIp, errorGermanIp, errorEnglishWeather, errorGermanWeather, ipData, ipDataDE, weatherData, weatherData_de, } = FetchApiData();
+
+  // const ipDataString = sessionStorage.getItem("ipData");
+  // const ipData = JSON.parse(ipDataString);
   if (ipData && Object.keys(ipData).length > 0) {
     return (
       <>
@@ -59,9 +58,9 @@ export const Landing = () => {
                     <CssBaseline />
                     <Container sx={{ width: "98%", textAlign: "left" }}>
                       <h3>Welcome to my Portfolio!</h3>
-                      <DisplayLocation />
-                      <DisplayTime />
-                      <DisplayWeather />
+                      <DisplayLocation ipData={ipData} />
+                      <DisplayTime ipData={ipData} />
+                      <DisplayWeather weatherData={weatherData} />
                       <p>My name is{" "}
                         <a
                           href="http://localhost:5173/AboutMe"
@@ -83,6 +82,8 @@ export const Landing = () => {
                       </p>
                     </Container>
                   </>)
-        }      </>);
+        }
+      </>
+    );
   }
 };

@@ -17,16 +17,17 @@ export const FetchApiData = () => {
 
     const fetchRealData = () => {
         //! English IP
-        const ipBaseUrl = import.meta.env.VITE_APP_IP_BASE_URL;
+        const ipBaseUrl = "https://api.apibundle.io/ip-lookup"
         const ipKey = import.meta.env.VITE_APP_IP_KEY;
-        const ipUrl = `${ipBaseUrl}${ipKey}`;
+        const ipParam = "&language=en";
+        const ipUrl = `${ipBaseUrl}${ipKey}${ipParam}`;
         fetch(ipUrl)
             .then((response) => response.json())
             .then((data) => {
                 sessionStorage.setItem("ipData", JSON.stringify(data));
                 //! German IP
-                const ip_de = import.meta.env.VITE_APP_IP_PARAM_GERMAN;
-                const ipUrl_de = `${ipUrl}${ip_de}`;
+                const ipParam_de = "&language=de";
+                const ipUrl_de = `${ipBaseUrl}${ipKey}${ipParam_de}`;
                 fetch(ipUrl_de)
                     .then((response) => response.json())
                     .then((data) => {
@@ -34,10 +35,10 @@ export const FetchApiData = () => {
                         //! English Weather
                         const parsedLocationData = JSON.parse(JSON.stringify(data));
                         const sanitisedCityName = JSON.stringify(parsedLocationData.city.name.split(" ").join(""));
-                        const weatherBaseUrl = import.meta.env.VITE_APP_WEATHER_BASE_URL;
+                        const weatherBaseUrl = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline";
                         const countryCode = data.country.iso_2_code;
                         const WeatherRequestEndpoint = `/${sanitisedCityName},${countryCode}/today`;
-                        const weatherRequestParams = import.meta.env.VITE_APP_WEATHER_REQUEST_PARAMS;
+                        const weatherRequestParams = "?include=days&elements=conditions&lang=en";
                         const weatherApiKey = import.meta.env.VITE_APP_WEATHER_KEY;
                         const weatherUrl = `${weatherBaseUrl}${WeatherRequestEndpoint}${weatherRequestParams}${weatherApiKey}`;
                         fetch(weatherUrl)
@@ -45,8 +46,8 @@ export const FetchApiData = () => {
                             .then((data) => {
                                 sessionStorage.setItem("weatherData", JSON.stringify(data));
                                 //! German Weather
-                                const weather_de = import.meta.env.VITE_APP_WEATHER_REQUEST_PARAMS_DE
-                                const weatherUrl_de = `${weatherUrl}${weather_de}`;
+                                const weatherRequestParams_de = "?include=days&elements=conditions&lang=de";
+                                const weatherUrl_de = `${weatherBaseUrl}${WeatherRequestEndpoint}${weatherRequestParams_de}${weatherApiKey}`;
                                 fetch(weatherUrl_de)
                                     .then((response) => response.json())
                                     .then((data) => { sessionStorage.setItem("weatherData_de", JSON.stringify(data)); })
@@ -72,7 +73,7 @@ export const FetchApiData = () => {
             .finally(() => {
                 setLoading(false);
             });
-        console.log("Set Real Session Storage Items");
+        console.log("Real Session Storage Items Set in SessionStorage");
     };
 
     const fetchMockData = () => {
@@ -230,13 +231,8 @@ export const FetchApiData = () => {
     };
 
     // fetchRealData();
+    fetchMockData();
 
-    // useEffect(() => {
-        // setTimeout(() => {
-            fetchMockData();
-        // }, 1000);
-    // }, [])
-
-    // return { loading, errorEnglishIp, errorGermanIp, errorEnglishWeather, errorGermanWeather, ipData, ipData_de, weatherData, weatherData_de, };
+    return { loading, errorEnglishIp, errorGermanIp, errorEnglishWeather, errorGermanWeather, ipData, ipData_de, weatherData, weatherData_de, };
 };
 

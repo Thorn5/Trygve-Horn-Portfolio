@@ -8,7 +8,7 @@ import { BodyContent } from "./components/BodyContent.jsx";
 import { FetchApiData } from "./assets/Fetch/FetchApiData.jsx";
 
 function App() {
-  FetchApiData();
+  // FetchApiData();
   return (
     <>
       <CssBaseline />
