@@ -233,6 +233,6 @@ export const FetchApiData = () => {
     // fetchRealData();
     fetchMockData();
 
-    return { loading, errorEnglishIp, errorGermanIp, errorEnglishWeather, errorGermanWeather, ipData, ipData_de, weatherData, weatherData_de, };
+    return { loading, errorEnglishIp, errorGermanIp, errorEnglishWeather, errorGermanWeather, /* ipData, ipData_de, weatherData, weatherData_de, */ };
 };
 

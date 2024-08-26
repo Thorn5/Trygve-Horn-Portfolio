@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { CssBaseline, Container } from "@mui/material";
 import { FetchApiData } from "../../assets/Fetch/FetchApiData";
 
-const DisplayLocation = (ipData) => {
-  // const ipDataString = sessionStorage.getItem("ipData");
-  // const ipData = JSON.parse(ipDataString);
+const DisplayLocation = () => {
+  const ipDataString = sessionStorage.getItem("ipData");
+  const ipData = JSON.parse(ipDataString);
   return (
     <>
       It looks like you are in or near {ipData.city}, {ipData.country_name}
@@ -15,9 +15,9 @@ const DisplayLocation = (ipData) => {
   );
 };
 
-const DisplayTime = (ipData) => {
-  // const ipDataString = sessionStorage.getItem("ipData");
-  // const ipData = JSON.parse(ipDataString);
+const DisplayTime = () => {
+  const ipDataString = sessionStorage.getItem("ipData");
+  const ipData = JSON.parse(ipDataString);
   const [time, setTime] = useState(
     new Date().toLocaleTimeString(`en-US`, { timeZone: ipData.timezone })
   );
@@ -35,17 +35,18 @@ const DisplayTime = (ipData) => {
   return <>where the time is {time},&nbsp;</>;
 };
 
-const DisplayWeather = (weatherData) => {
-  // const weatherDataString = sessionStorage.getItem("weatherData");
-  // const weatherData = JSON.parse(weatherDataString);
+const DisplayWeather = () => {
+  const weatherDataString = sessionStorage.getItem("weatherData");
+  const weatherData = JSON.parse(weatherDataString);
   return <>and the weather is {weatherData.currentConditions.conditions}.</>;
 };
 
 export const Landing = () => {
-  const { loading, errorEnglishIp, errorGermanIp, errorEnglishWeather, errorGermanWeather, ipData, ipDataDE, weatherData, weatherData_de, } = FetchApiData();
+  const { loading, errorEnglishIp, errorGermanIp, errorEnglishWeather, errorGermanWeather, /* ipData, ipDataDE, weatherData, weatherData_de, */ } = FetchApiData();
+  // FetchApiData();
 
-  // const ipDataString = sessionStorage.getItem("ipData");
-  // const ipData = JSON.parse(ipDataString);
+  const ipDataString = sessionStorage.getItem("ipData");
+  const ipData = JSON.parse(ipDataString);
   if (ipData && Object.keys(ipData).length > 0) {
     return (
       <>
@@ -58,9 +59,9 @@ export const Landing = () => {
                     <CssBaseline />
                     <Container sx={{ width: "98%", textAlign: "left" }}>
                       <h3>Welcome to my Portfolio!</h3>
-                      <DisplayLocation ipData={ipData} />
-                      <DisplayTime ipData={ipData} />
-                      <DisplayWeather weatherData={weatherData} />
+                      <DisplayLocation />
+                      <DisplayTime />
+                      <DisplayWeather />
                       <p>My name is{" "}
                         <a
                           href="http://localhost:5173/AboutMe"
