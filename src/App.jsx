@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { HeaderBar, MainContent, PortFolioTheme, } from "./assets/PortFolioTheme.jsx";
 import { HeaderAppBar } from "./components/HeaderAppBar.jsx";
 import { BodyContent } from "./components/BodyContent.jsx";
-import { FetchApiData } from "./assets/Fetch/FetchApiData.jsx";
+// import { FetchApiData } from "./assets/Fetch/FetchApiData.jsx";
 
 function App() {
   // FetchApiData();
