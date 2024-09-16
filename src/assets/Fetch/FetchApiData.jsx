@@ -194,7 +194,7 @@ export const FetchApiData = () => {
                 "tzoffset": 2,
                 "days": [
                     {
-                        "conditions": "Partially cloudy"
+                        "conditions": "Meh"
                     }
                 ]
             };
@@ -208,7 +208,7 @@ export const FetchApiData = () => {
                 "tzoffset": 2,
                 "days": [
                     {
-                        "conditions": "Teilweise bewölkt"
+                        "conditions": "Naja"
                     }
                 ]
             };
