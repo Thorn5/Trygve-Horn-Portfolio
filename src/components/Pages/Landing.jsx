@@ -50,7 +50,7 @@ export const Landing = () => {
   if (!ipData || !weatherData) {
     return (
       <div>
-        <h3>The data has not resolved yet. Please wait a moment.</h3>
+        <h3>Loading...</h3>
       </div>
     )
   } else {
