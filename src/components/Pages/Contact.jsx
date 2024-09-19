@@ -1,8 +1,14 @@
 // Contact.jsx
-import React from 'react'
+// import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 export const Contact = () => {
+  const { t } = useTranslation();
   return (
-    <div>Contact</div>
+    <>
+      <div>
+        {t("Contact.Contact")}
+      </div>
+    </>
   )
 }

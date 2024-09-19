@@ -1,0 +1,45 @@
+{
+    "HeaderAppBar" : {
+        "HeaderAppBar_Title" : "Lebenslauf und Portfolio von A. Trygve Horn",
+        "Home": "Landingpage",
+        "AboutMe" : "Über mich",
+        "CV" : "Lebenslauf",
+        "Projects" :"Projekte",
+        "AboutSite" : "Über diese Site",
+        "Contact" : "Kontakt"
+    },
+    "AboutMe" :{
+        "AboutMe" : "Über mich"
+    },
+    "AboutSite" :{
+        "AboutSite" : "Über diese Site"
+    },
+    "Contact" :{
+        "Contact" : "Kontakt"
+    },
+    "Landing" :{
+        "Loading" : "Die Seite wird geladen...",
+        "errorEnglishIp" : "Englisch Standortfehler:",
+        "errorGermanIp" : "Deutsch Standortfehler:",
+        "errorEnglishWeather" : "Englisch Wetterfehler:",
+        "errorGermanWeather" : "Deutsch Wetterfehler:",
+        "Welcome" : "Willkommen in meinem Portfolio!",
+        "DisplayLocation" : "Es sieht so aus, als wären Sie in oder in der Nähe von ",
+        "DisplayTime" : "wo die Zeit ist",
+        "DisplayWeather" : "und das Wetter ist",
+        "PreName" : "Mein Name ist",
+        "Location" : ", ursprünglich aus Kapstadt, Südafrika, und jetzt lebe ich in Solingen, Deutschland.",
+        "LearnMore" : "Um mehr über mich oder",
+        "ThisProject" : "dieses Projekt",
+        "ProjectClick" : " zu erfahren, klicken Sie auf das Hamburger-Menü links in der Titelleiste und wählen Sie ein interessantes Thema aus."      
+    },
+    "NotFound" :{
+        "NotFound" : "404 - Seite nicht gefunden"
+    },
+    "Projects" :{
+        "Projects" : "Projekte"
+    },
+    "TrygveHornCV" :{
+        "TrygveHornCV" : "Lebenslauf"
+    }
+}
