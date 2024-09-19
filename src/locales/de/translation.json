@@ -12,10 +12,10 @@
         "AboutMe" : "Über mich"
     },
     "AboutSite" :{
-        "AboutSite" : "AboutSite in German"
+        "AboutSite" : "Über diese Site"
     },
     "Contact" :{
-        "Contact" : "Contact in German"
+        "Contact" : "Kontakt"
     },
     "Landing" :{
         "Loading" : "Die Seite wird geladen...",
@@ -37,9 +37,9 @@
         "NotFound" : "404 - Seite nicht gefunden"
     },
     "Projects" :{
-        "Projects" : "Projects in German"
+        "Projects" : "Projekte"
     },
     "TrygveHornCV" :{
-        "TrygveHornCV" : "TrygveHornCV in German"
+        "TrygveHornCV" : "Lebenslauf"
     }
 }
