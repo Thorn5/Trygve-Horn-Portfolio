@@ -3,7 +3,7 @@
 // import React from "react";
 import { useState, useEffect } from "react";
 import { CssBaseline, Container } from "@mui/material";
-import { FetchApiData } from "../../assets/Fetch/FetchApiData";
+import { FetchApiData } from "../../assets/FetchApiData";
 import { useTranslation } from "react-i18next";
 
 const DisplayLocation = ({ parsedIpData }) => {
