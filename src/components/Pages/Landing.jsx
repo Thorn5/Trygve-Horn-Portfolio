@@ -4,22 +4,23 @@
 import { useState, useEffect } from "react";
 import { CssBaseline, Container } from "@mui/material";
 import { FetchApiData } from "../../assets/Fetch/FetchApiData";
+import { useTranslation } from "react-i18next";
 
 const DisplayLocation = ({ parsedIpData }) => {
-  // const ipDataString = sessionStorage.getItem("ipData");
-  // const ipData = JSON.parse(ipDataString);
+  const { t } = useTranslation();
   return (
     <>
-      It looks like you are in or near {parsedIpData.city.name}, {parsedIpData.country.name}
-      ,&nbsp;
+      <span>
+        {t("Landing.DisplayLocation")} {parsedIpData.city.name},{" "}
+        {parsedIpData.country.name},{" "}
+      </span>
     </>
   );
 };
 
 const DisplayTime = ({ parsedIpData }) => {
-  // const ipDataString = sessionStorage.getItem("ipData");
-  // const ipData = JSON.parse(ipDataString);
   const [time, setTime] = useState(new Date().toLocaleTimeString(`en-US`, { timeZone: parsedIpData.timezone.name }));
+  const { t } = useTranslation();
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -31,16 +32,28 @@ const DisplayTime = ({ parsedIpData }) => {
     return () => clearInterval(intervalId);
   }, [parsedIpData, time]);
 
-  return <>where the time is {time},&nbsp;</>;
+  return (
+    <>
+      <span>
+        {t("Landing.DisplayTime")} {time},{" "}
+      </span>
+    </>
+  )
 };
 
 const DisplayWeather = ({ parsedWeatherData }) => {
-  // const weatherDataString = sessionStorage.getItem("weatherData");
-  // const weatherData = JSON.parse(weatherDataString);
-  return <>and the weather is {parsedWeatherData.days[0].conditions}.</>;
+  const { t } = useTranslation();
+  return (
+    <>
+      <span>
+        {t("Landing.DisplayWeather")} {parsedWeatherData.days[0].conditions}.
+      </span>
+    </>
+  )
 };
 
 export const Landing = () => {
+  const { t } = useTranslation();
   const { loading, errorEnglishIp, errorGermanIp, errorEnglishWeather, errorGermanWeather, ipData, ipData_de, weatherData, weatherData_de, } = FetchApiData();
   const parsedIpData = JSON.parse(ipData);
   const parsedIpData_de = JSON.parse(ipData_de);
@@ -50,42 +63,42 @@ export const Landing = () => {
   if (!ipData || !weatherData) {
     return (
       <div>
-        <h3>Loading...</h3>
+        <h3>{t("Landing.Loading")}</h3>
       </div>
     )
   } else {
     return (
       <>
-        {loading ? (<p>Loading...</p>)
-          : errorEnglishIp ? (`English Location error: ${errorEnglishIp}`)
-            : errorGermanIp ? (`German Location error: ${errorGermanIp}`)
-              : errorEnglishWeather ? (`English Weather error: ${errorEnglishWeather}`)
-                : errorGermanWeather ? (`German Weather error: ${errorGermanWeather}`)
+        {loading ? (<p>{t("Landing.Loading")}</p>)
+          : errorEnglishIp ? (<p>`{t("Landing.errorEnglishIp")} ${errorEnglishIp}`</p>)
+            : errorGermanIp ? (<p>`{t("Landing.errorGermanIp")} ${errorGermanIp}`</p>)
+              : errorEnglishWeather ? (<p>`{t("Landing.errorEnglishWeather")} ${errorEnglishWeather}`</p>)
+                : errorGermanWeather ? (<p>`{t("Landing.errorGermanWeather")} ${errorGermanWeather}`</p>)
                   : (<>
                     <CssBaseline />
                     <Container sx={{ width: "98%", textAlign: "left" }}>
-                      <h3>Welcome to my Portfolio!</h3>
+                    <h3>{t("Landing.Welcome")}</h3>
                       <DisplayLocation parsedIpData={parsedIpData} />
                       <DisplayTime parsedIpData={parsedIpData} />
                       <DisplayWeather parsedWeatherData={parsedWeatherData} />
-                      <p>My name is{" "}
+                      <p> {t("Landing.PreName")}{" "}
                         <a
                           href="http://localhost:5173/AboutMe"
                           target="_self"
                           rel="noopener noreferrer">
                           A. Trygve Horn
-                        </a>, originally from Cape town, South Africa, and now living in Solingen,
-                        Germany.
+                        </a>
+                        {t("Landing.Location")}
                       </p>
                       <p>
-                        To learn more about me or{" "}
+                      {t("Landing.LearnMore")}{" "}
                         <a
                           href="http://localhost:5173/AboutSite"
                           target="_self"
                           rel="noopener noreferrer">
-                          this project
-                        </a>, click on the hamburger menu on
-                        the left of the Title Bar and select a topic of interest.
+                          {t("Landing.ThisProject")}
+                        </a>
+                        {t("Landing.ProjectClick")}
                       </p>
                     </Container>
                   </>)

@@ -13,6 +13,8 @@ import {
   MenuItem,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useTranslation } from 'react-i18next'
+import { LanguageSelector } from "./LanguageSelector";
 
 export const HeaderAppBar = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -20,10 +22,12 @@ export const HeaderAppBar = () => {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = () =>
-    {
-      setAnchorEl(null);
-    };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const { t } = useTranslation();
+
 
   return (
     <>
@@ -71,7 +75,8 @@ export const HeaderAppBar = () => {
                     to="/"
                     onClick={() => handleClose("/")}
                   >
-                    Home/ Landing
+                    {/* Home/ Landing */}
+                    {t("HeaderAppBar.Home")}
                   </MenuItem>
                   <MenuItem // AboutMe
                     sx={{ "&:hover": { textDecoration: "underline" } }}
@@ -85,7 +90,7 @@ export const HeaderAppBar = () => {
                     to="/AboutMe"
                     onClick={() => handleClose("/AboutMe")}
                   >
-                    About Me
+                    {t("HeaderAppBar.AboutMe")}
                   </MenuItem>
                   <MenuItem // TrygveHornCV
                     sx={{ "&:hover": { textDecoration: "underline" } }}
@@ -98,8 +103,9 @@ export const HeaderAppBar = () => {
                     }}
                     to="/TrygveHornCV"
                     onClick={() => handleClose("/TrygveHornCV")}
-                  >
-                    Curriculum Vitae
+                    >
+                    
+                    {t("HeaderAppBar.CV")}
                   </MenuItem>
                   <MenuItem // Projects
                     sx={{ "&:hover": { textDecoration: "underline" } }}
@@ -112,8 +118,8 @@ export const HeaderAppBar = () => {
                     }}
                     to="/Projects"
                     onClick={() => handleClose("/Projects")}
-                  >
-                    Projects
+                    >
+                    {t("HeaderAppBar.Projects")}
                   </MenuItem>
                   <MenuItem // AboutSite
                     sx={{ "&:hover": { textDecoration: "underline" } }}
@@ -126,8 +132,8 @@ export const HeaderAppBar = () => {
                     }}
                     to="/AboutSite"
                     onClick={() => handleClose("/AboutSite")}
-                  >
-                    About This Site
+                    >
+                    {t("HeaderAppBar.AboutSite")}
                   </MenuItem>
                   <MenuItem // Contact
                     sx={{ "&:hover": { textDecoration: "underline" } }}
@@ -140,15 +146,18 @@ export const HeaderAppBar = () => {
                     }}
                     to="/Contact"
                     onClick={() => handleClose("/Contact")}
-                  >
-                    Contact Me
+                    >
+                    
+                    {t("HeaderAppBar.Contact")}
                   </MenuItem>
                 </Menu>
               </nav>
             </Box>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              CV and Portfolio of A. Trygve Horn
+              {/* CV and Portfolio of A. Trygve Horn */}
+              {t("HeaderAppBar.HeaderAppBar_Title")}
             </Typography>
+            <LanguageSelector />
           </Toolbar>
         </AppBar>
         <Toolbar variant="dense" />

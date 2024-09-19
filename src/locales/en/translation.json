@@ -1,0 +1,45 @@
+{
+    "HeaderAppBar" : {
+        "HeaderAppBar_Title" : "CV and Portfolio of A. Trygve Horn",
+        "Home": "Home/ Landing",
+        "AboutMe" : "About Me",
+        "CV" : "Curriculum Vitae",
+        "Projects" :"Projects",
+        "AboutSite" : "About This Site",
+        "Contact" : "Contact Me"
+    },
+    "AboutMe" :{
+        "AboutMe" : "AboutMe"
+    },
+    "AboutSite" :{
+        "AboutSite" : "AboutSite in English"
+    },
+    "Contact" :{
+        "Contact" : "Contact in English"
+    },
+    "Landing" :{
+        "Loading" : "Loading...",
+        "errorEnglishIp" : "English Location error:",
+        "errorGermanIp" : "German Location error:",
+        "errorEnglishWeather" : "English Weather error:",
+        "errorGermanWeather" : "German Weather error:",
+        "Welcome" : "Welcome to my Portfolio!",
+        "DisplayLocation" : "It looks like you are in or near ",
+        "DisplayTime" : "where the time is",
+        "DisplayWeather" : "and the weather is",
+        "PreName" : "My name is",
+        "Location" : ", originally from Cape town, South Africa, and now living in Solingen, Germany.",
+        "LearnMore" : "To learn more about me or",
+        "ThisProject" : "this project",
+        "ProjectClick" : ", click on the hamburger menu on the left of the Title Bar and select a topic of interest."      
+    },
+    "NotFound" :{
+        "NotFound" : "404 - Page Not Found"
+    },
+    "Projects" :{
+        "Projects" : "Projects in English"
+    },
+    "TrygveHornCV" :{
+        "TrygveHornCV" : "TrygveHornCV in English"
+    }
+}
