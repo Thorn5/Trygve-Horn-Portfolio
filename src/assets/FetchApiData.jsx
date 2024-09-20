@@ -238,7 +238,7 @@ export const FetchApiData = () => {
                 // setErrorGermanWeather ("101");
 
                 console.log("FetchApiData.jsx Set Mock Session Storage Items");
-            }, 1500); // delay in ms
+            }, 250); // delay in ms
             return () => clearTimeout(timer);
         }, []);
     };
