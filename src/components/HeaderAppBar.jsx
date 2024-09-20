@@ -28,6 +28,11 @@ export const HeaderAppBar = () => {
 
   const { t } = useTranslation();
 
+  //! Temp
+  // Identify Language
+  const { i18n } = useTranslation();
+  console.log(`Site is in ${i18n.language}`);
+  //! End Temp
 
   return (
     <>
@@ -103,8 +108,8 @@ export const HeaderAppBar = () => {
                     }}
                     to="/TrygveHornCV"
                     onClick={() => handleClose("/TrygveHornCV")}
-                    >
-                    
+                  >
+
                     {t("HeaderAppBar.CV")}
                   </MenuItem>
                   <MenuItem // Projects
@@ -118,7 +123,7 @@ export const HeaderAppBar = () => {
                     }}
                     to="/Projects"
                     onClick={() => handleClose("/Projects")}
-                    >
+                  >
                     {t("HeaderAppBar.Projects")}
                   </MenuItem>
                   <MenuItem // AboutSite
@@ -132,7 +137,7 @@ export const HeaderAppBar = () => {
                     }}
                     to="/AboutSite"
                     onClick={() => handleClose("/AboutSite")}
-                    >
+                  >
                     {t("HeaderAppBar.AboutSite")}
                   </MenuItem>
                   <MenuItem // Contact
@@ -146,8 +151,8 @@ export const HeaderAppBar = () => {
                     }}
                     to="/Contact"
                     onClick={() => handleClose("/Contact")}
-                    >
-                    
+                  >
+
                     {t("HeaderAppBar.Contact")}
                   </MenuItem>
                 </Menu>
