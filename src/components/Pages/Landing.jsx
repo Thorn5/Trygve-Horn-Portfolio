@@ -3,8 +3,8 @@
 // import React from "react";
 import { useState, useEffect } from "react";
 import { CssBaseline, Container } from "@mui/material";
-import { FetchApiData } from "../../assets/FetchApiData";
 import { useTranslation } from "react-i18next";
+import { FetchApiData } from "../../assets/FetchApiData";
 
 const DisplayLocation = ({ currentIpData }) => {
   // Get translation function and current language
@@ -77,11 +77,13 @@ const DisplayWeather = ({ currentWeather }) => {
   }
 };
 
+// const CheckIfDataExists = () => {};
+
 export const Landing = () => {
   const { t, i18n } = useTranslation();
   const CurrentLanguage = i18n.language;
 
-  const { loading, errorEnglishIp, errorGermanIp, errorEnglishWeather, errorGermanWeather, ipData, ipData_de, weatherData, weatherData_de, } = FetchApiData();
+  const { loading, errorEnglishIp, errorGermanIp, errorEnglishWeather, errorGermanWeather, ipData, ipData_de, weatherData, weatherData_de, timeAtFetch, } = FetchApiData();
   const parsedIpData = JSON.parse(ipData);
   const parsedIpData_de = JSON.parse(ipData_de);
   const parsedWeatherData = JSON.parse(weatherData);
@@ -98,6 +100,8 @@ export const Landing = () => {
       </div>
     )
   } else {
+    console.log(ipData);
+    console.log(timeAtFetch);
     return (
       <>
         {loading ? (<p>{t("Landing.Loading")}</p>)

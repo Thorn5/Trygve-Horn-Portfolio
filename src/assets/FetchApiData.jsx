@@ -13,6 +13,12 @@ export const FetchApiData = () => {
     const [ipData_de, setIpData_de] = useState(null);
     const [weatherData, setWeatherData] = useState(null);
     const [weatherData_de, setWeatherData_de] = useState(null);
+    // Capture time at API call
+    const rawTimeAtFetch = new Date();
+    const timeAtFetchHours = rawTimeAtFetch.getHours();
+    const timeAtFetchMinute = rawTimeAtFetch.getMinutes();
+    const timeAtFetchPaddedMinute = timeAtFetchMinute.toString().padStart(2, '0');
+    const timeAtFetch = `${timeAtFetchHours}:${timeAtFetchPaddedMinute}`;
 
     const fetchRealData = () => {
 
@@ -84,6 +90,7 @@ export const FetchApiData = () => {
                 })
                 .finally(() => { setLoading(false); });
             console.log("Real Session Storage Items Set in SessionStorage");
+            sessionStorage.setItem("timeAtFetch", timeAtFetch);
             sessionStorage.setItem("API Call", "Real");
 
             //   return () => {}
@@ -238,6 +245,7 @@ export const FetchApiData = () => {
                 // setErrorGermanWeather ("101");
 
                 console.log("FetchApiData.jsx Set Mock Session Storage Items");
+            sessionStorage.setItem("timeAtFetch", timeAtFetch);
             }, 250); // delay in ms
             return () => clearTimeout(timer);
         }, []);
@@ -246,6 +254,6 @@ export const FetchApiData = () => {
     // fetchRealData();
     fetchMockData();
 
-    return { loading, errorEnglishIp, errorGermanIp, errorEnglishWeather, errorGermanWeather, ipData, ipData_de, weatherData, weatherData_de, };
+    return { loading, errorEnglishIp, errorGermanIp, errorEnglishWeather, errorGermanWeather, ipData, ipData_de, weatherData, weatherData_de, timeAtFetch, };
 };
 
