@@ -28,12 +28,6 @@ export const HeaderAppBar = () => {
 
   const { t } = useTranslation();
 
-  //! Temp
-  // Identify Language
-  const { i18n } = useTranslation();
-  console.log(`Site is in ${i18n.language}`);
-  //! End Temp
-
   return (
     <>
       <CssBaseline />
