@@ -77,31 +77,60 @@ const DisplayWeather = ({ currentWeather }) => {
   }
 };
 
-// const CheckIfDataExists = () => {};
-
 export const Landing = () => {
+  const [loading, setLoading] = useState(true);
+  const [errorEnglishIp, setErrorEnglishIp] = useState(null);
+  const [errorGermanIp, setErrorGermanIp] = useState(null);
+  const [errorEnglishWeather, setErrorEnglishWeather] = useState(null);
+  const [errorGermanWeather, setErrorGermanWeather] = useState(null);
+  const [ipData, setIpData] = useState(null);
+  const [ipData_de, setIpData_de] = useState(null);
+  const [weatherData, setWeatherData] = useState(null);
+  const [weatherData_de, setWeatherData_de] = useState(null);
   const { t, i18n } = useTranslation();
   const CurrentLanguage = i18n.language;
 
-  const { loading, errorEnglishIp, errorGermanIp, errorEnglishWeather, errorGermanWeather, ipData, ipData_de, weatherData, weatherData_de, timeAtFetch, } = FetchApiData();
-  const parsedIpData = JSON.parse(ipData);
-  const parsedIpData_de = JSON.parse(ipData_de);
-  const parsedWeatherData = JSON.parse(weatherData);
-  const parsedWeatherData_de = JSON.parse(weatherData_de);
+  const fetchData = () => {
+    const { 
+      apiLoading,
+      apiErrorEnglishIp,
+      apiErrorGermanIp,
+      apiErrorEnglishWeather,
+      apiErrorGermanWeather,
+      apiIpData,
+      apiIpData_de,
+      apiWeatherData,
+      apiWeatherData_de,
+    } = FetchApiData();
+    const parsedIpData = JSON.parse(apiIpData);
+    const parsedIpData_de = JSON.parse(apiIpData_de);
+    const parsedWeatherData = JSON.parse(apiWeatherData);
+    const parsedWeatherData_de = JSON.parse(apiWeatherData_de);
+    setLoading(apiLoading);
+    setErrorEnglishIp(apiErrorEnglishIp);
+    setErrorGermanIp(apiErrorGermanIp);
+    setErrorEnglishWeather(apiErrorEnglishWeather);
+    setErrorGermanWeather(apiErrorGermanWeather);
+    setIpData(parsedIpData);
+    setIpData_de(parsedIpData_de);
+    setWeatherData(parsedWeatherData);
+    setWeatherData_de(parsedWeatherData_de);
+  };
 
   // Select dataset based on current language selection
-  const currentIpData = CurrentLanguage === 'en' ? parsedIpData : parsedIpData_de;
-  const currentWeather = CurrentLanguage === 'en' ? parsedWeatherData : parsedWeatherData_de;
+  const currentIpData = CurrentLanguage === 'en' ? ipData : ipData_de;
+  const currentWeather = CurrentLanguage === 'en' ? weatherData : weatherData_de;
 
-  if (!ipData || !weatherData) {
+  fetchData();
+
+  if (!ipData || !ipData_de || !weatherData || !weatherData_de) {
     return (
       <div>
         <h3>{t("Landing.Loading")}</h3>
       </div>
     )
   } else {
-    console.log(ipData);
-    console.log(timeAtFetch);
+
     return (
       <>
         {loading ? (<p>{t("Landing.Loading")}</p>)
@@ -142,3 +171,5 @@ export const Landing = () => {
     );
   }
 }
+
+
