@@ -83,32 +83,40 @@ export const Landing = () => {
   const { t, i18n } = useTranslation();
   const CurrentLanguage = i18n.language;
 
-  const { loading, errorEnglishIp, errorGermanIp, errorEnglishWeather, errorGermanWeather, ipData, ipData_de, weatherData, weatherData_de, timeAtFetch, } = FetchApiData();
-  const parsedIpData = JSON.parse(ipData);
+  const { 
+    ipError_en,
+    ipError_de,
+    weatherError_en,
+    weatherError_de,
+    ipData_en,
+    ipData_de,
+    weatherData_en,
+    weatherData_de,
+    loading,
+  } = FetchApiData();
+  const parsedIpData = JSON.parse(ipData_en);
   const parsedIpData_de = JSON.parse(ipData_de);
-  const parsedWeatherData = JSON.parse(weatherData);
+  const parsedWeatherData = JSON.parse(weatherData_en);
   const parsedWeatherData_de = JSON.parse(weatherData_de);
 
   // Select dataset based on current language selection
   const currentIpData = CurrentLanguage === 'en' ? parsedIpData : parsedIpData_de;
   const currentWeather = CurrentLanguage === 'en' ? parsedWeatherData : parsedWeatherData_de;
 
-  if (!ipData || !weatherData) {
+  if (!currentIpData || !currentWeather) {
     return (
       <div>
         <h3>{t("Landing.Loading")}</h3>
       </div>
     )
   } else {
-    console.log(ipData);
-    console.log(timeAtFetch);
     return (
       <>
         {loading ? (<p>{t("Landing.Loading")}</p>)
-          : errorEnglishIp ? (<p>`{t("Landing.errorEnglishIp")} ${errorEnglishIp}`</p>)
-            : errorGermanIp ? (<p>`{t("Landing.errorGermanIp")} ${errorGermanIp}`</p>)
-              : errorEnglishWeather ? (<p>`{t("Landing.errorEnglishWeather")} ${errorEnglishWeather}`</p>)
-                : errorGermanWeather ? (<p>`{t("Landing.errorGermanWeather")} ${errorGermanWeather}`</p>)
+          : ipError_en ? (<p>{t("Landing.errorEnglishIp")} {ipError_en}</p>)
+            : ipError_de ? (<p>{t("Landing.errorGermanIp")} {ipError_de}</p>)
+              : weatherError_en ? (<p>{t("Landing.errorEnglishWeather")} {weatherError_en}</p>)
+                : weatherError_de ? (<p>{t("Landing.errorGermanWeather")} {weatherError_de}</p>)
                   : (<>
                     <CssBaseline />
                     <Container sx={{ width: "98%", textAlign: "left" }}>
