@@ -28,7 +28,22 @@ export const LanguageSelector = () => {
                     value={selectedLanguage}
                     exclusive
                     onChange={chooseLanguage}
-                    aria-label="text alignment">
+                    aria-label="text alignment"
+                    sx={{
+                        '& .MuiToggleButton-root.Mui-selected': {
+                          backgroundColor: '#4c7faf', // Custom background color for selected button
+                          color: 'white', // Custom text color for selected button
+                        },
+                        '& .MuiToggleButton-root': {
+                          color: 'grey', // Custom text color for unselected buttons
+                          borderColor: '#4c72af', // Custom border color
+                          '&:hover': {
+                            backgroundColor: '#bbdefb', // Custom hover color
+                          },
+                        },
+                      }}
+                >
+
                     <ToggleButton value="en" aria-label="English Version">EN
                     </ToggleButton>
                     <ToggleButton value="de" aria-label="German Version">DE
