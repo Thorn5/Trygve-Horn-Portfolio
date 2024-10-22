@@ -1,45 +1,53 @@
 {
-    "HeaderAppBar" : {
-        "HeaderAppBar_Title" : "CV and Portfolio of A. Trygve Horn",
+    "HeaderAppBar": {
+        "HeaderAppBar_Title": "CV and Portfolio of A. Trygve Horn",
         "Home": "Home/ Landing",
+        "AboutMe": "About Me",
+        "CV": "Curriculum Vitae",
+        "Projects": "Projects",
+        "AboutSite": "About This Site",
+        "Contact": "Contact Me"
+    },
+    "AboutMe": {
         "AboutMe" : "About Me",
-        "CV" : "Curriculum Vitae",
-        "Projects" :"Projects",
-        "AboutSite" : "About This Site",
-        "Contact" : "Contact Me"
+        "EastLondon": "I was born in East London, South Africa, in ‘76. The area was nature-on-steroids, teeming with wild animals, jungle-like plantlife, and warm rivers and oceans. It was an amazing place in which to be a child.",
+        "CapeTown": "In high school I moved to Cape Town - Still beautiful, but not quite as wild. With Table Mountain, more nightlife, amazing food and its tourist culture, Cape Town was a great place in which to be a young adult. ",
+        "BucketList": "Life in South Africa gave me the opportunity to experience and be a part of some pretty amazing things, many of which seemed mundane at the time:",
+        "BucketList_Item_1": "I have climbed cliffs and jumped off waterfalls",
+        "BucketList_Item_2": "I have held a black mamba snake",
+        "BucketList_Item_3": "I lived through the end of Apartheid…",
+        "Germany": "In 2010, my wife and I moved to Germany. Germany is a beautiful country, though the nature is tamer, quieter. I miss the wildness of South Africa, but there is a lot to appreciate about Germany. Germany is so much safer than South Africa, and after many years of living in Germany I finally feel safe in my home. Germany has a far more sophisticated, if broken, public transport system. And in Germany, if you need medical care, you will get it. ",
+        "Work": "I taught English for several years, and now I’m ready to go back into development. I completed a full-stack coding bootcamp and I look forward to developing apps and websites, and learning new skills along the way. "
     },
-    "AboutMe" :{
-        "AboutMe" : "AboutMe"
+    "AboutSite": {
+        "AboutSite": "AboutSite in English"
     },
-    "AboutSite" :{
-        "AboutSite" : "AboutSite in English"
+    "Contact": {
+        "Contact": "Contact in English"
     },
-    "Contact" :{
-        "Contact" : "Contact in English"
+    "Landing": {
+        "Loading": "Loading...",
+        "errorEnglishIp": "English Location error:",
+        "errorGermanIp": "German Location error:",
+        "errorEnglishWeather": "English Weather error:",
+        "errorGermanWeather": "German Weather error:",
+        "Welcome": "Welcome to my Portfolio!",
+        "DisplayLocation": "It looks like you are in or near ",
+        "DisplayTime": "where the time is",
+        "DisplayWeather": "and the weather is",
+        "PreName": "My name is",
+        "Location": ", originally from Cape town, South Africa, and now living in Solingen, Germany.",
+        "LearnMore": "To learn more about me or",
+        "ThisProject": "this project",
+        "ProjectClick": ", click on the hamburger menu on the left of the Title Bar and select a topic of interest."
     },
-    "Landing" :{
-        "Loading" : "Loading...",
-        "errorEnglishIp" : "English Location error:",
-        "errorGermanIp" : "German Location error:",
-        "errorEnglishWeather" : "English Weather error:",
-        "errorGermanWeather" : "German Weather error:",
-        "Welcome" : "Welcome to my Portfolio!",
-        "DisplayLocation" : "It looks like you are in or near ",
-        "DisplayTime" : "where the time is",
-        "DisplayWeather" : "and the weather is",
-        "PreName" : "My name is",
-        "Location" : ", originally from Cape town, South Africa, and now living in Solingen, Germany.",
-        "LearnMore" : "To learn more about me or",
-        "ThisProject" : "this project",
-        "ProjectClick" : ", click on the hamburger menu on the left of the Title Bar and select a topic of interest."      
+    "NotFound": {
+        "NotFound": "404 - Page Not Found"
     },
-    "NotFound" :{
-        "NotFound" : "404 - Page Not Found"
+    "Projects": {
+        "Projects": "Projects in English"
     },
-    "Projects" :{
-        "Projects" : "Projects in English"
-    },
-    "TrygveHornCV" :{
-        "TrygveHornCV" : "TrygveHornCV in English"
+    "TrygveHornCV": {
+        "TrygveHornCV": "TrygveHornCV in English"
     }
 }
