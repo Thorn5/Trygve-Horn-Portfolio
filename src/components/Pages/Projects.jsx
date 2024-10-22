@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next';
 
 export const Projects = () => {
   const { t } = useTranslation();
+  const siteBaseUrl = import.meta.env.VITE_APP_LOCAL_URL_STUB;
+
   return (
     <>
       <div>
@@ -18,7 +20,7 @@ export const Projects = () => {
           </a>{" "}
           {t("Projects.FocusOrThe")}{" "}
           <a
-            href="/AboutSite"
+            href={`${siteBaseUrl}/AboutSite`}
             target="_self"
             rel="noopener noreferrer">
             {t("Projects.FocusDescription")}

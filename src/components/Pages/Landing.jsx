@@ -82,7 +82,7 @@ const DisplayWeather = ({ currentWeather }) => {
 export const Landing = () => {
   const { t, i18n } = useTranslation();
   const CurrentLanguage = i18n.language;
-
+  const siteBaseUrl = import.meta.env.VITE_APP_LOCAL_URL_STUB;
   const {
     ipError_en,
     ipError_de,
@@ -126,9 +126,10 @@ export const Landing = () => {
                       <DisplayWeather currentWeather={currentWeather} />
                       <p> {t("Landing.PreName")}{" "}
                         <a
-                          href="/AboutMe"
+                          href={`${siteBaseUrl}/AboutMe`}
                           target="_self"
-                          rel="noopener noreferrer">
+                          rel="noopener noreferrer"
+                        >
                           A. Trygve Horn
                         </a>
                         {t("Landing.Location")}
@@ -136,7 +137,7 @@ export const Landing = () => {
                       <p>
                         {t("Landing.LearnMore")}{" "}
                         <a
-                          href="/AboutSite"
+                          href={`${siteBaseUrl}/AboutSite`}
                           target="_self"
                           rel="noopener noreferrer">
                           {t("Landing.ThisProject")}
