@@ -20,7 +20,28 @@
         "Work": "Ich habe mehrere Jahre lang Englisch unterrichtet und bin nun bereit, in die Entwicklung zurückzukehren. Ich habe einen Full-Stack-Coding-Bootcamp abgeschlossen und freue mich darauf, Apps und Websites zu entwickeln und dabei neue Fähigkeiten zu erlernen."
     },
     "AboutSite": {
-        "AboutSite": "Über diese Site"
+        "AboutSite": "Über diese Website",
+        "Framework": "Framework",
+        "FrameworkText": "Dieses Vite-Projekt wurde mit React und, wo angemessen, mit Vanilla-JavaScript codiert. Ich hielt mich an den ES7-Standard und verwendete moderne Komponenten, die mit Pfeilnotation deklariert wurden. Ich beabsichtige, das Projekt in naher Zukunft in TypeScript umzuwandeln.",
+        "ComponentLibrary": "Komponentenbibliothek",
+        "ComponentLibraryText": "Dieses Portfolio-Projekt wurde mit Material UI entwickelt - einer Open-Source-React-Komponentenbibliothek, die Googles Material Design umsetzt. Material UI ist eine opinionated Bibliothek, die Entwicklern spezifische Designmuster und architektonische Entscheidungen auferlegt. Obwohl ich es vorziehe, mit unopinionated Bibliotheken zu arbeiten, entschied ich mich für dieses Projekt für eine restriktivere Bibliotheksart.",
+        "ApiHook": "API Fetch Hook",
+        "ApiHookText": "Der API Fetch Hook verwendet verkettete Aufrufe, um den Standort des Benutzers auf Englisch und dann auf Deutsch zu ermitteln, verarbeitet dann die Standortdaten und implementiert einen weiteren verketteten Fetch, um die aktuellen Wetterbedingungen auf Englisch und dann auf Deutsch für den scheinbaren Standort des Benutzers zu erhalten. Die Standortdaten wurden auch verwendet, um die lokale Zeit am Standort des Benutzers zu bestimmen, die auf der Landingpage angezeigt wird.",
+        "ApiHookText2": "Leider lässt sich der modernere Async/Await-Ansatz nicht so zuverlässig verketten wie der ältere Fetch/Catch-Ansatz, daher griff ich in diesem Fall auf die ältere Technik zurück.",
+        "Themes": "Themes",
+        "ThemesText": "Ich wendete zwei Themes auf das Projekt an; eines für die App Bar am oberen Rand der Seite und ein zweites für den Inhalt des Hauptteils. Dies ermöglicht es mir, bei Bedarf verschiedene Themes auf die Schlüsselbereiche der Seite anzuwenden.",
+        "LanguageSelection": "Sprachauswahl",
+        "LanguageSelectionText": "Ich verwendete das i18next-Framework, um dem Benutzer die Auswahl zwischen einer englischen und einer deutschen Version der Seite zu ermöglichen. Das Framework verwendet JSON-Dateien mit Schlüssel/Wert-Einträgen in den entsprechenden Sprachen für eine schnelle Übersetzung.",
+        "LanguageSelectionText2": "Durch die Einbindung in den Übersetzungsauswahlcode konnte ich den Standort, das Wetter und den Lebenslauf in der ausgewählten Sprache bereitstellen.",
+        "LanguageSelectionText3": "Die i18next-Implementierung verwendet den lokalen Speicher, um die letzte Sprachauswahl zu speichern. Wenn keine Sprachauswahl gespeichert wurde, wird auf die standardmäßige englische Version zurückgegriffen.",
+        "Iframe": "Lebenslauf/ iframe",
+        "IframeText": "Mein Lebenslauf wird direkt von meinem Google Drive in ein iframe-Element geladen. Die ausgewählte Sprache wird ermittelt und die entsprechende Version des Lebenslaufs wird bereitgestellt.",
+        "Routing": "Routing",
+        "RoutingText": "Die App Bar enthält ein Hamburger-Menü mit der Website-Navigation. Jede Auswahl bewirkt, dass der Inhalt im Hauptteil unter der App Bar angezeigt wird... ziemlich Standard.",
+        "RoutingText2": "Material UI verfügt über eine spezielle 'sx'-Prop, mit der die auf ein bestimmtes Element angewendete CSS modifiziert werden kann, ohne die vom Theme Context Provider vorgegebenen CSS-Parameter zu beeinträchtigen. Dies ermöglicht eine Feinabstimmung, ohne auf eine separate CSS-Datei zurückgreifen zu müssen, die die Theme-Anwendung stören könnte.",
+        "Env": "Umgebungsvariablen/ Geheimnisse",
+        "EnvText": "Während der Entwicklung dieses Projekts wechselte ich zu einem neuen Computer. Als ich mein Projekt von GitHub wiederherstellte, wurde mir klar, dass ich vergessen hatte, die .env-Dateien zu speichern. Dies führte zum unwiderruflichen Verlust aller Umgebungsvariablen, die sowohl die API-URLs als auch die geheimen Schlüssel enthielten.",
+        "EnvText2": "Dieser Fehler lehrte mich eine wertvolle Lektion; ich nehme jetzt die API-URLs in meinen Hauptcode auf und speichere nur noch die API-Schlüssel als Umgebungsvariablen. Diese Anordnung ermöglicht eine einfachere Wiederherstellung von Projekten, da ich nur den API-Schlüssel abrufen muss und die URLs selbst wiederhergestellt werden, wenn das Repository geklont wird."
     },
     "Contact": {
         "Contact": "Kontakt"

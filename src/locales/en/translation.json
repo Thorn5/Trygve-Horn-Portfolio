@@ -20,7 +20,28 @@
         "Work": "I taught English for several years, and now I’m ready to go back into development. I completed a full-stack coding bootcamp and I look forward to developing apps and websites, and learning new skills along the way. "
     },
     "AboutSite": {
-        "AboutSite": "AboutSite in English"
+        "AboutSite": "About This Site",
+        "Framework": "Framework",
+        "FrameworkText": "This Vite project was coded using React, and vanilla JavaScript where appropriate. I adhered to the ES7 standard, using modern components declared with arrow notation. I intend to convert the project to TypeScript in the near future.",
+        "ComponentLibrary": "Component Library",
+        "ComponentLibraryText": "This portfolio project was designed using Material UI - an open-source React component library that implements Google's Material Design. Material UI is an opinionated library, which imposes specific design patterns and architectural choices on developers. Although I prefer to work with unopinionated libraries, I chose to work with a more restrictive library type for this project.",
+        "ApiHook": "API Fetch Hook",
+        "ApiHookText": "The API fetch hook uses chained calls to get the user’s location in English and then German, then processes the location data and implements another chained fetch to get the current weather conditions in English and then German for the user’s apparent location. The location data was also used to determine the local time at the user’s location, which is presented on the landing page.",
+        "ApiHookText2": "Unfortunately, the more modern Async/Await approach does not chain as reliably as the older Fetch/Catch approach, so in this instance I resorted to the older technique.",
+        "Themes": "Themes",
+        "ThemesText": "I applied two themes to the project; one to the App Bar at the top of the page, and a second to the body content. This allows me to apply different themes to the key areas of the page as necessary.",
+        "LanguageSelection": "Language Selection",
+        "LanguageSelectionText": "I used the i18next framework to allow the user to select an English or a German version of the page. The framework uses JSON files with key/value entries in the applicable languages for rapid translation.",
+        "LanguageSelectionText2": "By hooking into the translation selection code, I was able to serve the location, weather and CV in the selected language.",
+        "LanguageSelectionText3": "The i18next implementation uses localstorage to store the last language choice made. If no language selection has been stored, it falls back to the default English version.",
+        "Iframe": "Cv/ iframe",
+        "IframeText": "My CV is served directly from my Google Drive into an iframe element. The selected language is determined, and the appropriate version of the CV is delivered.",
+        "Routing": "Routing",
+        "RoutingText": "The App Bar contains a hamburger menu with the site navigation. Any selection causes the content to be displayed in the body section below the App Bar… pretty standard stuff.",
+        "RoutingText2": "Material UI has a special ‘sx’ prop which can modify the CSS applied to a specific element without breaking the css parameters imposed by the theme context provider. This allows fine-tuning, without resorting to a separate CSS file which may interfere with the theme application.",
+        "Env": "Environment Variables/ Secrets",
+        "EnvText": "During the development of this project I switched to a new computer. When I restored my project from GitHub, I realised that I had neglected to save the .env files. This caused the irrevocable loss of all of the environment variables, which included the API URLs as well as the secret keys.",
+        "EnvText2": "This mistake taught me a valuable lesson; I now include the API URLs in my main code, and only store the API keys as environment variables. This arrangement allows for easier restoration of projects, as I only need to retrieve the API key, and the URLs themselves will be restored when the repo is cloned."
     },
     "Contact": {
         "Contact": "Contact in English"
