@@ -83,7 +83,7 @@ export const Landing = () => {
   const { t, i18n } = useTranslation();
   const CurrentLanguage = i18n.language;
 
-  const { 
+  const {
     ipError_en,
     ipError_de,
     weatherError_en,

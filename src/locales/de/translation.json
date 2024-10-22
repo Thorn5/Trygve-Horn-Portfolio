@@ -1,53 +1,64 @@
 {
-    "HeaderAppBar" : {
-        "HeaderAppBar_Title" : "Lebenslauf und Portfolio von A. Trygve Horn",
+    "HeaderAppBar": {
+        "HeaderAppBar_Title": "Lebenslauf und Portfolio von A. Trygve Horn",
         "Home": "Einstiegsseite",
-        "AboutMe" : "Über mich",
-        "CV" : "Lebenslauf",
-        "Projects" :"Projekte",
-        "AboutSite" : "Über diese Site",
-        "Contact" : "Kontakt"
-    },
-    "AboutMe" :{
         "AboutMe": "Über mich",
-        "EastLondon" : "Ich wurde 1976 in East London, Südafrika, geboren. Die Gegend war Natur auf Steroiden, voller wilder Tiere, dschungelartiger Pflanzen und warmer Flüsse und Ozeane. Es war ein wunderbarer Ort, um Kind zu sein.",
-        "CapeTown" : "In der Oberstufe zog ich nach Kapstadt - immer noch schön, aber nicht ganz so wild. Mit dem Tafelberg, mehr Nachtleben, fantastischem Essen und seiner Touristenkultur war Kapstadt ein großartiger Ort, um ein junger Erwachsener zu sein.",
-        "BucketList" : "Das Leben in Südafrika gab mir die Möglichkeit, einige ziemlich erstaunliche Dinge zu erleben und Teil davon zu sein, von denen viele damals alltäglich erschienen:",
-        "BucketList_Item_1" : "Ich bin Klippen geklettert und von Wasserfällen gesprungen",
-        "BucketList_Item_2" : "Ich habe eine schwarze Mamba-Schlange gehalten",
-        "BucketList_Item_3" : "Ich habe das Ende der Apartheid miterlebt...",
-        "Germany" : "2010 zogen meine Frau und ich nach Deutschland. Deutschland ist ein schönes Land, auch wenn die Natur zahmer und ruhiger ist. Ich vermisse die Wildheit Südafrikas, aber es gibt vieles an Deutschland zu schätzen. Deutschland ist so viel sicherer als Südafrika, und nach vielen Jahren in Deutschland fühle ich mich endlich sicher in meinem Zuhause. Deutschland hat ein viel ausgefeilteres, wenn auch marodes, öffentliches Verkehrssystem. Und in Deutschland bekommt man medizinische Versorgung, wenn man sie braucht.",
-        "Work" : "Ich habe mehrere Jahre lang Englisch unterrichtet und bin nun bereit, in die Entwicklung zurückzukehren. Ich habe einen Full-Stack-Coding-Bootcamp abgeschlossen und freue mich darauf, Apps und Websites zu entwickeln und dabei neue Fähigkeiten zu erlernen."
+        "CV": "Lebenslauf",
+        "Projects": "Projekte",
+        "AboutSite": "Über diese Site",
+        "Contact": "Kontakt"
     },
-    "AboutSite" :{
-        "AboutSite" : "Über diese Site"
+    "AboutMe": {
+        "AboutMe": "Über mich",
+        "EastLondon": "Ich wurde 1976 in East London, Südafrika, geboren. Die Gegend war Natur auf Steroiden, voller wilder Tiere, dschungelartiger Pflanzen und warmer Flüsse und Ozeane. Es war ein wunderbarer Ort, um Kind zu sein.",
+        "CapeTown": "In der Oberstufe zog ich nach Kapstadt - immer noch schön, aber nicht ganz so wild. Mit dem Tafelberg, mehr Nachtleben, fantastischem Essen und seiner Touristenkultur war Kapstadt ein großartiger Ort, um ein junger Erwachsener zu sein.",
+        "BucketList": "Das Leben in Südafrika gab mir die Möglichkeit, einige ziemlich erstaunliche Dinge zu erleben und Teil davon zu sein, von denen viele damals alltäglich erschienen:",
+        "BucketList_Item_1": "Ich bin Klippen geklettert und von Wasserfällen gesprungen",
+        "BucketList_Item_2": "Ich habe eine schwarze Mamba-Schlange gehalten",
+        "BucketList_Item_3": "Ich habe das Ende der Apartheid miterlebt...",
+        "Germany": "2010 zogen meine Frau und ich nach Deutschland. Deutschland ist ein schönes Land, auch wenn die Natur zahmer und ruhiger ist. Ich vermisse die Wildheit Südafrikas, aber es gibt vieles an Deutschland zu schätzen. Deutschland ist so viel sicherer als Südafrika, und nach vielen Jahren in Deutschland fühle ich mich endlich sicher in meinem Zuhause. Deutschland hat ein viel ausgefeilteres, wenn auch marodes, öffentliches Verkehrssystem. Und in Deutschland bekommt man medizinische Versorgung, wenn man sie braucht.",
+        "Work": "Ich habe mehrere Jahre lang Englisch unterrichtet und bin nun bereit, in die Entwicklung zurückzukehren. Ich habe einen Full-Stack-Coding-Bootcamp abgeschlossen und freue mich darauf, Apps und Websites zu entwickeln und dabei neue Fähigkeiten zu erlernen."
     },
-    "Contact" :{
-        "Contact" : "Kontakt"
+    "AboutSite": {
+        "AboutSite": "Über diese Site"
     },
-    "Landing" :{
-        "Loading" : "Die Seite wird geladen...",
-        "errorEnglishIp" : "Englisch Standortfehler:",
-        "errorGermanIp" : "Deutsch Standortfehler:",
-        "errorEnglishWeather" : "Englisch Wetterfehler:",
-        "errorGermanWeather" : "Deutsch Wetterfehler:",
-        "Welcome" : "Willkommen in meinem Portfolio!",
-        "DisplayLocation" : "Es scheint, dass Sie sich derzeit in oder in der Nähe von ",
-        "DisplayTime" : "aufhalten, wo die Zeit ist",
-        "DisplayWeather" : "und das Wetter ist",
-        "PreName" : "Mein Name ist",
-        "Location" : ", ursprünglich aus Kapstadt, Südafrika, und jetzt lebe ich in Solingen, Deutschland.",
-        "LearnMore" : "Um mehr über mich oder",
-        "ThisProject" : "dieses Projekt",
-        "ProjectClick" : " zu erfahren, klicken Sie auf das Hamburger-Menü links in der Titelleiste und wählen Sie ein interessantes Thema aus."      
+    "Contact": {
+        "Contact": "Kontakt"
     },
-    "NotFound" :{
-        "NotFound" : "404 - Seite nicht gefunden"
+    "Landing": {
+        "Loading": "Die Seite wird geladen...",
+        "errorEnglishIp": "Englisch Standortfehler:",
+        "errorGermanIp": "Deutsch Standortfehler:",
+        "errorEnglishWeather": "Englisch Wetterfehler:",
+        "errorGermanWeather": "Deutsch Wetterfehler:",
+        "Welcome": "Willkommen in meinem Portfolio!",
+        "DisplayLocation": "Es scheint, dass Sie sich derzeit in oder in der Nähe von ",
+        "DisplayTime": "aufhalten, wo die Zeit ist",
+        "DisplayWeather": "und das Wetter ist",
+        "PreName": "Mein Name ist",
+        "Location": ", ursprünglich aus Kapstadt, Südafrika, und jetzt lebe ich in Solingen, Deutschland.",
+        "LearnMore": "Um mehr über mich oder",
+        "ThisProject": "dieses Projekt",
+        "ProjectClick": " zu erfahren, klicken Sie auf das Hamburger-Menü links in der Titelleiste und wählen Sie ein interessantes Thema aus."
     },
-    "Projects" :{
-        "Projects" : "Projekte"
+    "NotFound": {
+        "NotFound": "404 - Seite nicht gefunden"
     },
-    "TrygveHornCV" :{
-        "TrygveHornCV" : "Lebenslauf"
+    "Projects": {
+        "Projects": "Meine Projekte",
+        "Intro": "Ich habe an einer Reihe kleiner Projekte gearbeitet, jedoch führte eine schlecht geplante Computermigration zu einem unwiederbringlichen Verlust der Umgebungsvariablen, die für die erforderlichen API-Aufrufe benötigt wurden, damit jedes Projekt funktionieren konnte.",
+        "FocusStart": "Anstatt zu versuchen, alle Projekte wiederherzustellen, habe ich mich auf dieses Portfolio konzentriert und Funktionalität sowie Code unter der Haube hinzugefügt, den ich jeden Recruiter einlade, im ",
+        "FocusLink": "GitHub-Repository",
+        "FocusOrThe": "oder auf",
+        "FocusDescription": "der Beschreibungsseite",
+        "FocusFinish": "dieses Portfolios zu untersuchen.",
+        "Plans": "Sobald dieses Portfolio vollständig ausgearbeitet ist, werde ich meine interessantesten Arbeiten wiederherstellen und neue Miniprojekte erstellen, um meine Fähigkeiten weiter zu entwickeln und zu präsentieren.",
+        "CurrentStatus": "Bis die Wiederherstellung abgeschlossen ist, lade ich Sie ein, sich meine eigene Nachbildung eines Gruppenprojekts aus meinem Bootcamp anzusehen:",
+        "ShowMyIp": "Show My IP",
+        "ShowMyIpGitHub": "GitHub-Repository für Show My IP:",
+        "ShowMyIpGitHubLink": "https://github.com/Thorn5/Show-My-IP-React-Vite"
+    },
+    "TrygveHornCV": {
+        "TrygveHornCV": "Lebenslauf"
     }
 }
