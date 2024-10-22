@@ -235,8 +235,8 @@ export const FetchApiData = () => {
     };
 
     useEffect(() => {
-        // fetchRealData();
-        fetchMockData();
+        fetchRealData();
+        // fetchMockData();
     }, []);
 
     return {
