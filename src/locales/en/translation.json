@@ -9,7 +9,7 @@
         "Contact": "Contact Me"
     },
     "AboutMe": {
-        "AboutMe" : "About Me",
+        "AboutMe": "About Me",
         "EastLondon": "I was born in East London, South Africa, in ‘76. The area was nature-on-steroids, teeming with wild animals, jungle-like plantlife, and warm rivers and oceans. It was an amazing place in which to be a child.",
         "CapeTown": "In high school I moved to Cape Town - Still beautiful, but not quite as wild. With Table Mountain, more nightlife, amazing food and its tourist culture, Cape Town was a great place in which to be a young adult. ",
         "BucketList": "Life in South Africa gave me the opportunity to experience and be a part of some pretty amazing things, many of which seemed mundane at the time:",
@@ -45,7 +45,18 @@
         "NotFound": "404 - Page Not Found"
     },
     "Projects": {
-        "Projects": "Projects in English"
+        "Projects": "My Projects",
+        "Intro": "I have worked on a number of small projects, however a poorly planned computer migration caused an irrecoverable loss of the environment variables required to establish the API calls needed for each to work.",
+        "FocusStart": "Rather than attempt to restore all of the projects, I have focussed on this portfolio, adding functionality and under-the-hood code that I invite any recruiter to examine at the",
+        "FocusLink": "GitHub repo",
+        "FocusOrThe": "or the",
+        "FocusDescription": "descripton page",
+        "FocusFinish": "for this portfolio.",
+        "Plans": "Once this portfolio is fully fleshed out, I will restore my most interesting work, and create new mini projects to further develop and showcase my skills.",
+        "CurrentStatus": "Until the restoration is complete, I invite you to look at my own recreation of a group project from my bootcamp:",
+        "ShowMyIp": "Show My IP",
+        "ShowMyIpGitHub": "GitHub Repo for Show My IP:",
+        "ShowMyIpGitHubLink": "https://github.com/Thorn5/Show-My-IP-React-Vite"
     },
     "TrygveHornCV": {
         "TrygveHornCV": "TrygveHornCV in English"
