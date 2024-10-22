@@ -126,7 +126,7 @@ export const Landing = () => {
                       <DisplayWeather currentWeather={currentWeather} />
                       <p> {t("Landing.PreName")}{" "}
                         <a
-                          href="http://localhost:5173/AboutMe"
+                          href="/AboutMe"
                           target="_self"
                           rel="noopener noreferrer">
                           A. Trygve Horn
@@ -136,7 +136,7 @@ export const Landing = () => {
                       <p>
                         {t("Landing.LearnMore")}{" "}
                         <a
-                          href="http://localhost:5173/AboutSite"
+                          href="/AboutSite"
                           target="_self"
                           rel="noopener noreferrer">
                           {t("Landing.ThisProject")}

@@ -18,7 +18,7 @@ export const Projects = () => {
           </a>{" "}
           {t("Projects.FocusOrThe")}{" "}
           <a
-            href="http://localhost:5173/AboutSite"
+            href="/AboutSite"
             target="_self"
             rel="noopener noreferrer">
             {t("Projects.FocusDescription")}
