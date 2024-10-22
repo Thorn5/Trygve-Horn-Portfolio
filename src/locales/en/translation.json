@@ -44,7 +44,12 @@
         "EnvText2": "This mistake taught me a valuable lesson; I now include the API URLs in my main code, and only store the API keys as environment variables. This arrangement allows for easier restoration of projects, as I only need to retrieve the API key, and the URLs themselves will be restored when the repo is cloned."
     },
     "Contact": {
-        "Contact": "Contact in English"
+        "Contact": "Contact Me",
+        "ContactInvite": "If you have any questions about this website, or if you would like to reach out to me about possible employment, please contact me at:",
+        "ContactEmail": "email:",
+        "Landline": "Landline: +49 (0) 212 64573450",
+        "Cell": "Cell: +49 (0) 170 4772434",
+        "salutation": "Later, and thanks for the visit!"
     },
     "Landing": {
         "Loading": "Loading...",

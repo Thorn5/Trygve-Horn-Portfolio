@@ -44,7 +44,12 @@
         "EnvText2": "Dieser Fehler lehrte mich eine wertvolle Lektion; ich nehme jetzt die API-URLs in meinen Hauptcode auf und speichere nur noch die API-Schlüssel als Umgebungsvariablen. Diese Anordnung ermöglicht eine einfachere Wiederherstellung von Projekten, da ich nur den API-Schlüssel abrufen muss und die URLs selbst wiederhergestellt werden, wenn das Repository geklont wird."
     },
     "Contact": {
-        "Contact": "Kontakt"
+        "Contact": "Kontaktieren Sie mich",
+        "ContactInvite": "Wenn Sie Fragen zu dieser Website haben oder wenn Sie mich wegen möglicher Anstellungen kontaktieren möchten, erreichen Sie mich unter:",
+        "ContactEmail": "E-Mail:",
+        "Landline": "Festnetz: +49 (0) 212 64573450",
+        "Cell": "Mobil: +49 (0) 170 4772434",
+        "salutation": "Bis später und danke für Ihren Besuch!"
     },
     "Landing": {
         "Loading": "Die Seite wird geladen...",
