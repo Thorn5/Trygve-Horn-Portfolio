@@ -34,7 +34,7 @@
         "LanguageSelectionText": "I used the i18next framework to allow the user to select an English or a German version of the page. The framework uses JSON files with key/value entries in the applicable languages for rapid translation.",
         "LanguageSelectionText2": "By hooking into the translation selection code, I was able to serve the location, weather and CV in the selected language.",
         "LanguageSelectionText3": "The i18next implementation uses localstorage to store the last language choice made. If no language selection has been stored, it falls back to the default English version.",
-        "Iframe": "Cv/ iframe",
+        "Iframe": "CV/ iframe",
         "IframeText": "My CV is served directly from my Google Drive into an iframe element. The selected language is determined, and the appropriate version of the CV is delivered.",
         "Routing": "Routing",
         "RoutingText": "The App Bar contains a hamburger menu with the site navigation. Any selection causes the content to be displayed in the body section below the App Bar… pretty standard stuff.",
