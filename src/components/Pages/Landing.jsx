@@ -103,13 +103,13 @@ export const Landing = () => {
   const currentIpData = CurrentLanguage === 'en' ? parsedIpData : parsedIpData_de;
   const currentWeather = CurrentLanguage === 'en' ? parsedWeatherData : parsedWeatherData_de;
 
-  if (!currentIpData || !currentWeather) {
-    return (
-      <div>
-        <h3>{t("Landing.Loading")}</h3>
-      </div>
-    )
-  } else {
+  // if (!currentIpData || !currentWeather || !ipError_en || !ipError_de || !weatherError_en || !weatherError_de) {
+  //   return (
+  //     <div>
+  //       <h3>{t("Landing.Loading")}</h3>
+  //     </div>
+  //   )
+  // } else {
     return (
       <>
         {loading ? (<p>{t("Landing.Loading")}</p>)
@@ -149,5 +149,5 @@ export const Landing = () => {
         }
       </>
     );
-  }
+  // }
 }
