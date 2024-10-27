@@ -27,7 +27,7 @@
         "ComponentLibraryText": "This portfolio project was designed using Material UI - an open-source React component library that implements Google's Material Design. Material UI is an opinionated library, which imposes specific design patterns and architectural choices on developers. Although I prefer to work with unopinionated libraries, I chose to work with a more restrictive library type for this project.",
         "ApiHook": "API Fetch Hook",
         "ApiHookText": "The API fetch hook uses chained calls to get the user’s location in English and then German, then processes the location data and implements another chained fetch to get the current weather conditions in English and then German for the user’s apparent location. The location data was also used to determine the local time at the user’s location, which is presented on the landing page.",
-        "ApiHookText2": "Unfortunately, the more modern Async/Await approach does not chain as reliably as the older Fetch/Catch approach, so in this instance I resorted to the older technique.",
+        "ApiHookText2": "The codebase contains code for Fetch/Catch as well as Async/Await API calls. ",
         "Themes": "Themes",
         "ThemesText": "I applied two themes to the project; one to the App Bar at the top of the page, and a second to the body content. This allows me to apply different themes to the key areas of the page as necessary.",
         "LanguageSelection": "Language Selection",
