@@ -86,10 +86,11 @@ export const Landing = () => {
   const CurrentLanguage = i18n.language;
   const siteBaseUrl = import.meta.env.VITE_APP_LOCAL_URL_STUB;
   const {
-    ipError_en,
-    ipError_de,
-    weatherError_en,
-    weatherError_de,
+    error,
+    // ipError_en,
+    // ipError_de,
+    // weatherError_en,
+    // weatherError_de,
     ipData_en,
     ipData_de,
     weatherData_en,
@@ -100,6 +101,9 @@ export const Landing = () => {
   const parsedIpData_de = JSON.parse(ipData_de);
   const parsedWeatherData_en = JSON.parse(weatherData_en);
   const parsedWeatherData_de = JSON.parse(weatherData_de);
+
+  console.log(error);
+  
 
   // Select dataset based on current language selection
   const currentIpData = CurrentLanguage === 'en' ? parsedIpData_en : parsedIpData_de;
@@ -112,44 +116,45 @@ export const Landing = () => {
   //     </div>
   //   )
   // } else {
-    return (
-      <>
-        {loading ? (<p>{t("Landing.Loading")}</p>)
-          : ipError_en ? (<p>{t("Landing.errorEnglishIp")} {ipError_en}</p>)
-            : ipError_de ? (<p>{t("Landing.errorGermanIp")} {ipError_de}</p>)
-              : weatherError_en ? (<p>{t("Landing.errorEnglishWeather")} {weatherError_en}</p>)
-                : weatherError_de ? (<p>{t("Landing.errorGermanWeather")} {weatherError_de}</p>)
-                  : (<>
-                    <CssBaseline />
-                    <Container sx={{ width: "98%", textAlign: "left" }}>
-                      <h3>{t("Landing.Welcome")}</h3>
-                      <DisplayLocation currentIpData={currentIpData} />
-                      <DisplayTime currentIpData={currentIpData} />
-                      <DisplayWeather currentWeather={currentWeather} />
-                      <p> {t("Landing.PreName")}{" "}
-                        <a
-                          href={`${siteBaseUrl}/AboutMe`}
-                          target="_self"
-                          rel="noopener noreferrer"
-                        >
-                          A. Trygve Horn
-                        </a>
-                        {t("Landing.Location")}
-                      </p>
-                      <p>
-                        {t("Landing.LearnMore")}{" "}
-                        <a
-                          href={`${siteBaseUrl}/AboutSite`}
-                          target="_self"
-                          rel="noopener noreferrer">
-                          {t("Landing.ThisProject")}
-                        </a>
-                        {t("Landing.ProjectClick")}
-                      </p>
-                    </Container>
-                  </>)
-        }
-      </>
-    );
+  return (
+    <>
+      {loading ? (<p>{t("Landing.Loading")}</p>)
+        : error ? (<p>{error}</p>)
+          /*           : ipError_en ? (<p>{t("Landing.errorEnglishIp")} {ipError_en}</p>)
+                      : ipError_de ? (<p>{t("Landing.errorGermanIp")} {ipError_de}</p>)
+                        : weatherError_en ? (<p>{t("Landing.errorEnglishWeather")} {weatherError_en}</p>)
+                          : weatherError_de ? (<p>{t("Landing.errorGermanWeather")} {weatherError_de}</p>) */
+          : (<>
+            <CssBaseline />
+            <Container sx={{ width: "98%", textAlign: "left" }}>
+              <h3>{t("Landing.Welcome")}</h3>
+              <DisplayLocation currentIpData={currentIpData} />
+              <DisplayTime currentIpData={currentIpData} />
+              <DisplayWeather currentWeather={currentWeather} />
+              <p> {t("Landing.PreName")}{" "}
+                <a
+                  href={`${siteBaseUrl}/AboutMe`}
+                  target="_self"
+                  rel="noopener noreferrer"
+                >
+                  A. Trygve Horn
+                </a>
+                {t("Landing.Location")}
+              </p>
+              <p>
+                {t("Landing.LearnMore")}{" "}
+                <a
+                  href={`${siteBaseUrl}/AboutSite`}
+                  target="_self"
+                  rel="noopener noreferrer">
+                  {t("Landing.ThisProject")}
+                </a>
+                {t("Landing.ProjectClick")}
+              </p>
+            </Container>
+          </>)
+      }
+    </>
+  );
   // }
 }

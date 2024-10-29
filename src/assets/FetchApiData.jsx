@@ -4,10 +4,11 @@ import /* React, */ { useState, /* useEffect */ } from "react";
 
 export const FetchApiData = () => {
 
-    const [ipError_en, setIpError_en] = useState(null);
-    const [ipError_de, setIpError_de] = useState(null);
-    const [weatherError_en, setWeatherError_en] = useState(null);
-    const [weatherError_de, setWeatherError_de] = useState(null);
+    const [error, setError] = useState(null);
+    // const [ipError_en, setIpError_en] = useState(null);
+    // const [ipError_de, setIpError_de] = useState(null);
+    // const [weatherError_en, setWeatherError_en] = useState(null);
+    // const [weatherError_de, setWeatherError_de] = useState(null);
     const [ipData_en, setIpData_en] = useState(null);
     const [ipData_de, setIpData_de] = useState(null);
     const [weatherData_en, setWeatherData_en] = useState(null);
@@ -20,7 +21,7 @@ export const FetchApiData = () => {
         const ipKey = import.meta.env.VITE_APP_IP_KEY;
         const ipParam_en = "&language=en";
         const ipParam_de = "&language=de";
-        const ipUrl_en = `${ipBaseUrl}${ipKey}${ipParam_en}`; 
+        const ipUrl_en = `${ipBaseUrl}${ipKey}${ipParam_en}`;
         const ipUrl_de = `${ipBaseUrl}${ipKey}${ipParam_de}`;
         fetch(ipUrl_en)
             .then((response) => response.json())
@@ -117,6 +118,7 @@ export const FetchApiData = () => {
 
             // English Weather fetch
             const parsedLocationData = JSON.parse(ipData_en_Stringify);
+            // const sanitisedCityName = JSON.stringify(parsedLocationData.city.name.split(" ").join(""));
             const sanitisedCityName = parsedLocationData.city.name.replace(/\s/g, "");
             const weatherBaseUrl = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline";
             const countryCode = parsedLocationData.country.iso_2_code;
@@ -146,20 +148,21 @@ export const FetchApiData = () => {
             setWeatherData_de(weatherData_de_Stringify);
 
         } catch (error) {
-            if (error.message.includes("ipUrl")) {
-            setIpError_en(error);
-            console.error("Error fetching English IP data:", error);
-            } else if (error.message.includes("ipUrl_de")) {
-            setIpError_de(error);
-            console.error("Error fetching German IP data:", error);
-            } else if (error.message.includes("weatherUrl")) {
-            setWeatherError_en(error);
-            console.error("Error fetching English weather data:", error);
-            } else if (error.message.includes("weatherUrl_de")) {
-            setWeatherError_de(error);
-            console.error("Error fetching German weather data:", error);
-            }
-            console.log(error);
+            // if (error.message.includes("ipUrl")) {
+            //     setIpError_en(error);
+            //     console.error("Error fetching English IP data:", error);
+            // } else if (error.message.includes("ipUrl_de")) {
+            //     setIpError_de(error);
+            //     console.error("Error fetching German IP data:", error);
+            // } else if (error.message.includes("weatherUrl")) {
+            //     setWeatherError_en(error);
+            //     console.error("Error fetching English weather data:", error);
+            // } else if (error.message.includes("weatherUrl_de")) {
+            //     setWeatherError_de(error);
+            //     console.error("Error fetching German weather data:", error);
+            // }
+            // console.log("Error:", error);
+            setError(error.message);
         } finally {
             setLoading(false);
             // Set final session storage items
@@ -325,10 +328,11 @@ export const FetchApiData = () => {
     }, []);
 
     return {
-        ipError_en,
-        ipError_de,
-        weatherError_en,
-        weatherError_de,
+        error,
+        /*         ipError_en,
+                ipError_de,
+                weatherError_en,
+                weatherError_de, */
         ipData_en,
         ipData_de,
         weatherData_en,
