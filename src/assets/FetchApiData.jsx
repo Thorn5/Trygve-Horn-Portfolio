@@ -82,7 +82,7 @@ export const FetchApiData = () => {
             .finally(() => { setLoading(false); });
         console.log("Real Session Storage Items Set in SessionStorage");
         sessionStorage.setItem("fetchTimeStamp", new Date().getTime());
-        sessionStorage.setItem("API Call", "Real");
+        sessionStorage.setItem("API Call", "Real - Fetch/ Catch");
     };
 
     const fetchRealData_Async = async () => {
@@ -164,7 +164,7 @@ export const FetchApiData = () => {
             setLoading(false);
             // Set final session storage items
             sessionStorage.setItem("fetchTimeStamp", new Date().getTime());
-            sessionStorage.setItem("API Call", "Real");
+            sessionStorage.setItem("API Call", "Real - Async/ Await");
             console.log("Real Session Storage Items Set in SessionStorage");
         }
     };
