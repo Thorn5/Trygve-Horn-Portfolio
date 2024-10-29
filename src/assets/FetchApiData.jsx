@@ -90,11 +90,6 @@ export const FetchApiData = () => {
 
         // English IP fetch
 
-        // const ipBaseUrl = "https://api.apibundle.io/ip-lookup";
-        // const ipKey = import.meta.env.VITE_APP_IP_KEY;
-        // const ipParam = "&language=en";
-        // const ipUrl = `${ipBaseUrl}${ipKey}${ipParam}`;
-
         const ipBaseUrl = "https://api.apibundle.io/ip-lookup"
         const ipKey = import.meta.env.VITE_APP_IP_KEY;
         const ipParam_en = "&language=en";
@@ -151,19 +146,19 @@ export const FetchApiData = () => {
             setWeatherData_de(weatherData_de_Stringify);
 
         } catch (error) {
-            // if (error.message.includes("ipUrl")) {
-            // setIpError_en(error);
-            // console.error("Error fetching English IP data:", error);
-            // } else if (error.message.includes("ipUrl_de")) {
-            // setIpError_de(error);
-            // console.error("Error fetching German IP data:", error);
-            // } else if (error.message.includes("weatherUrl")) {
-            // setWeatherError_en(error);
-            // console.error("Error fetching English weather data:", error);
-            // } else if (error.message.includes("weatherUrl_de")) {
-            // setWeatherError_de(error);
-            // console.error("Error fetching German weather data:", error);
-            // }
+            if (error.message.includes("ipUrl")) {
+            setIpError_en(error);
+            console.error("Error fetching English IP data:", error);
+            } else if (error.message.includes("ipUrl_de")) {
+            setIpError_de(error);
+            console.error("Error fetching German IP data:", error);
+            } else if (error.message.includes("weatherUrl")) {
+            setWeatherError_en(error);
+            console.error("Error fetching English weather data:", error);
+            } else if (error.message.includes("weatherUrl_de")) {
+            setWeatherError_de(error);
+            console.error("Error fetching German weather data:", error);
+            }
             console.log(error);
         } finally {
             setLoading(false);
@@ -324,8 +319,8 @@ export const FetchApiData = () => {
     };
 
     useEffect(() => {
-        fetchRealData_Fetch();
-        // fetchRealData_Async();
+        // fetchRealData_Fetch();
+        fetchRealData_Async();
         // fetchMockData();
     }, []);
 

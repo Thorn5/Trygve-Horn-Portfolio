@@ -7,7 +7,7 @@ export const TrygveHornCV = () => {
   const CurrentLanguage = i18n.language;
 
     // Select CV based on current language selection
-    const cvSrc = CurrentLanguage === 'en' ? import.meta.env.VITE_APP_CV_PDF : import.meta.env.VITE_APP_CV_PDF_DE;
+    const cvSrc = CurrentLanguage === 'en' ? import.meta.env.VITE_APP_CV_PDF_EN : import.meta.env.VITE_APP_CV_PDF_DE;
     
   return (
     <div>

@@ -77,6 +77,8 @@ const DisplayWeather = ({ currentWeather }) => {
   }
 };
 
+// const DisplayLocationMap = ({ currentIpData }) => {};
+
 // const CheckIfDataExists = () => {};
 
 export const Landing = () => {
@@ -94,14 +96,14 @@ export const Landing = () => {
     weatherData_de,
     loading,
   } = FetchApiData();
-  const parsedIpData = JSON.parse(ipData_en);
+  const parsedIpData_en = JSON.parse(ipData_en);
   const parsedIpData_de = JSON.parse(ipData_de);
-  const parsedWeatherData = JSON.parse(weatherData_en);
+  const parsedWeatherData_en = JSON.parse(weatherData_en);
   const parsedWeatherData_de = JSON.parse(weatherData_de);
 
   // Select dataset based on current language selection
-  const currentIpData = CurrentLanguage === 'en' ? parsedIpData : parsedIpData_de;
-  const currentWeather = CurrentLanguage === 'en' ? parsedWeatherData : parsedWeatherData_de;
+  const currentIpData = CurrentLanguage === 'en' ? parsedIpData_en : parsedIpData_de;
+  const currentWeather = CurrentLanguage === 'en' ? parsedWeatherData_en : parsedWeatherData_de;
 
   // if (!currentIpData || !currentWeather || !ipError_en || !ipError_de || !weatherError_en || !weatherError_de) {
   //   return (

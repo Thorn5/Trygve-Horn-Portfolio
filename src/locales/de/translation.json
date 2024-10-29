@@ -14,7 +14,7 @@
         "CapeTown": "In der Oberstufe zog ich nach Kapstadt - immer noch schön, aber nicht ganz so wild. Mit dem Tafelberg, mehr Nachtleben, fantastischem Essen und seiner Touristenkultur war Kapstadt ein großartiger Ort, um ein junger Erwachsener zu sein.",
         "BucketList": "Das Leben in Südafrika gab mir die Möglichkeit, einige ziemlich erstaunliche Dinge zu erleben und Teil davon zu sein, von denen viele damals alltäglich erschienen:",
         "BucketList_Item_1": "Ich bin Klippen geklettert und von Wasserfällen gesprungen",
-        "BucketList_Item_2": "Ich habe eine schwarze Mamba-Schlange gehalten",
+        "BucketList_Item_2": "Ich habe eine schwarze Mamba-Schlange gehalten und bin mit Haien geschwommen",
         "BucketList_Item_3": "Ich habe das Ende der Apartheid miterlebt...",
         "Germany": "2010 zogen meine Frau und ich nach Deutschland. Deutschland ist ein schönes Land, auch wenn die Natur zahmer und ruhiger ist. Ich vermisse die Wildheit Südafrikas, aber es gibt vieles an Deutschland zu schätzen. Deutschland ist so viel sicherer als Südafrika, und nach vielen Jahren in Deutschland fühle ich mich endlich sicher in meinem Zuhause. Deutschland hat ein viel ausgefeilteres, wenn auch marodes, öffentliches Verkehrssystem. Und in Deutschland bekommt man medizinische Versorgung, wenn man sie braucht.",
         "Work": "Ich habe mehrere Jahre lang Englisch unterrichtet und bin nun bereit, in die Entwicklung zurückzukehren. Ich habe einen Full-Stack-Coding-Bootcamp abgeschlossen und freue mich darauf, Apps und Websites zu entwickeln und dabei neue Fähigkeiten zu erlernen."
@@ -58,7 +58,7 @@
         "errorEnglishWeather": "Englisch Wetterfehler:",
         "errorGermanWeather": "Deutsch Wetterfehler:",
         "Welcome": "Willkommen in meinem Portfolio!",
-        "DisplayLocation": "Es scheint, dass Sie sich derzeit in oder in der Nähe von ",
+        "DisplayLocation": "Ihre IP-Adresse deutet darauf hin, dass Sie sich in oder in der Nähe von ",
         "DisplayTime": "aufhalten, wo die Zeit ist",
         "DisplayWeather": "und das Wetter ist:",
         "PreName": "Mein Name ist",
