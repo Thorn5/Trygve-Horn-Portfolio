@@ -84,7 +84,7 @@ const DisplayWeather = ({ currentWeather }) => {
 export const Landing = () => {
   const { t, i18n } = useTranslation();
   const CurrentLanguage = i18n.language;
-  const siteBaseUrl = import.meta.env.VITE_APP_LOCAL_URL_STUB;
+  const siteBaseUrl = import.meta.env.VITE_APP_SITE_URL_STUB;
   const {
     error,
     // ipError_en,
@@ -102,20 +102,10 @@ export const Landing = () => {
   const parsedWeatherData_en = JSON.parse(weatherData_en);
   const parsedWeatherData_de = JSON.parse(weatherData_de);
 
-  console.log(error);
-  
-
   // Select dataset based on current language selection
   const currentIpData = CurrentLanguage === 'en' ? parsedIpData_en : parsedIpData_de;
   const currentWeather = CurrentLanguage === 'en' ? parsedWeatherData_en : parsedWeatherData_de;
 
-  // if (!currentIpData || !currentWeather || !ipError_en || !ipError_de || !weatherError_en || !weatherError_de) {
-  //   return (
-  //     <div>
-  //       <h3>{t("Landing.Loading")}</h3>
-  //     </div>
-  //   )
-  // } else {
   return (
     <>
       {loading ? (<p>{t("Landing.Loading")}</p>)
@@ -156,5 +146,4 @@ export const Landing = () => {
       }
     </>
   );
-  // }
 }

@@ -86,6 +86,92 @@ export const FetchApiData = () => {
         sessionStorage.setItem("API Call", "Real - Fetch/ Catch");
     };
 
+    // const fetchRealData_Async = async () => {
+    //     setLoading(true);
+
+    //     // English IP fetch
+
+    //     const ipBaseUrl = "https://api.apibundle.io/ip-lookup"
+    //     const ipKey = import.meta.env.VITE_APP_IP_KEY;
+    //     const ipParam_en = "&language=en";
+    //     const ipParam_de = "&language=de";
+    //     const ipUrl_en = `${ipBaseUrl}${ipKey}${ipParam_en}`;
+    //     const ipUrl_de = `${ipBaseUrl}${ipKey}${ipParam_de}`;
+
+    //     try {
+    //         const response_en = await fetch(ipUrl_en);
+    //         const data_en = await response_en.json();
+    //         const ipData_en_Stringify = JSON.stringify(data_en);
+
+    //         // Save to session storage and state
+    //         sessionStorage.setItem("ipData_en", ipData_en_Stringify);
+    //         setIpData_en(ipData_en_Stringify);
+
+    //         // German IP fetch
+    //         const response_de = await fetch(ipUrl_de);
+    //         const data_de = await response_de.json();
+    //         const ipData_de_Stringify = JSON.stringify(data_de);
+
+    //         // Save to session storage and state
+    //         sessionStorage.setItem("ipData_de", ipData_de_Stringify);
+    //         setIpData_de(ipData_de_Stringify);
+
+    //         // English Weather fetch
+    //         const parsedLocationData = JSON.parse(ipData_en_Stringify);
+    //         // const sanitisedCityName = JSON.stringify(parsedLocationData.city.name.split(" ").join(""));
+    //         const sanitisedCityName = parsedLocationData.city.name.replace(/\s/g, "");
+    //         const weatherBaseUrl = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline";
+    //         const countryCode = parsedLocationData.country.iso_2_code;
+    //         const WeatherRequestEndpoint = `/${sanitisedCityName},${countryCode}/today`;
+    //         const weatherRequestParams_en = "?include=days&elements=conditions&lang=en";
+    //         const weatherRequestParams_de = "?include=days&elements=conditions&lang=de";
+    //         const weatherApiKey = import.meta.env.VITE_APP_WEATHER_KEY;
+    //         const weatherUrl_en = `${weatherBaseUrl}${WeatherRequestEndpoint}${weatherRequestParams_en}${weatherApiKey}`;
+    //         const weatherUrl_de = `${weatherBaseUrl}${WeatherRequestEndpoint}${weatherRequestParams_de}${weatherApiKey}`;
+
+    //         const weatherResponse_en = await fetch(weatherUrl_en);
+    //         const weatherData_en_Result = await weatherResponse_en.json();
+    //         const weatherData_en_Stringify = JSON.stringify(weatherData_en_Result);
+
+    //         // Save to session storage and state
+    //         sessionStorage.setItem("weatherData_en", weatherData_en_Stringify);
+    //         setWeatherData_en(weatherData_en_Stringify);
+
+    //         // German Weather fetch
+
+    //         const weatherResponse_de = await fetch(weatherUrl_de);
+    //         const weatherData_de_Result = await weatherResponse_de.json();
+    //         const weatherData_de_Stringify = JSON.stringify(weatherData_de_Result);
+
+    //         // Save to session storage and state
+    //         sessionStorage.setItem("weatherData_de", weatherData_de_Stringify);
+    //         setWeatherData_de(weatherData_de_Stringify);
+
+    //     } catch (error) {
+    //         // if (error.message.includes("ipUrl")) {
+    //         //     setIpError_en(error);
+    //         //     console.error("Error fetching English IP data:", error);
+    //         // } else if (error.message.includes("ipUrl_de")) {
+    //         //     setIpError_de(error);
+    //         //     console.error("Error fetching German IP data:", error);
+    //         // } else if (error.message.includes("weatherUrl")) {
+    //         //     setWeatherError_en(error);
+    //         //     console.error("Error fetching English weather data:", error);
+    //         // } else if (error.message.includes("weatherUrl_de")) {
+    //         //     setWeatherError_de(error);
+    //         //     console.error("Error fetching German weather data:", error);
+    //         // }
+    //         // console.log("Error:", error);
+    //         setError(error.message);
+    //     } finally {
+    //         setLoading(false);
+    //         // Set final session storage items
+    //         sessionStorage.setItem("fetchTimeStamp", new Date().getTime());
+    //         sessionStorage.setItem("API Call", "Real - Async/ Await");
+    //         console.log("Real Session Storage Items Set in SessionStorage");
+    //     }
+    // };
+
     const fetchRealData_Async = async () => {
         setLoading(true);
 

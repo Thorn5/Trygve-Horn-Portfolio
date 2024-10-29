@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 export const Projects = () => {
   const { t } = useTranslation();
-  const siteBaseUrl = import.meta.env.VITE_APP_LOCAL_URL_STUB;
+  const siteBaseUrl = import.meta.env.VITE_APP_SITE_URL_STUB;
 
   return (
     <>
