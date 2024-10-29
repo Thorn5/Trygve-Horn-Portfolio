@@ -20,7 +20,7 @@ export const FetchApiData = () => {
         const ipKey = import.meta.env.VITE_APP_IP_KEY;
         const ipParam_en = "&language=en";
         const ipParam_de = "&language=de";
-        const ipUrl_en = `${ipBaseUrl}${ipKey}${ipParam_en}`;
+        const ipUrl_en = `${ipBaseUrl}${ipKey}${ipParam_en}`; 
         const ipUrl_de = `${ipBaseUrl}${ipKey}${ipParam_de}`;
         fetch(ipUrl_en)
             .then((response) => response.json())
@@ -324,8 +324,8 @@ export const FetchApiData = () => {
     };
 
     useEffect(() => {
-        // fetchRealData_Fetch();
-        fetchRealData_Async();
+        fetchRealData_Fetch();
+        // fetchRealData_Async();
         // fetchMockData();
     }, []);
 
