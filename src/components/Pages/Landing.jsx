@@ -109,11 +109,7 @@ export const Landing = () => {
   return (
     <>
       {loading ? (<p>{t("Landing.Loading")}</p>)
-        : error ? (<p>{error}</p>)
-          /*           : ipError_en ? (<p>{t("Landing.errorEnglishIp")} {ipError_en}</p>)
-                      : ipError_de ? (<p>{t("Landing.errorGermanIp")} {ipError_de}</p>)
-                        : weatherError_en ? (<p>{t("Landing.errorEnglishWeather")} {weatherError_en}</p>)
-                          : weatherError_de ? (<p>{t("Landing.errorGermanWeather")} {weatherError_de}</p>) */
+        : error ? (<p>{t("Landing.error")}</p>)
           : (<>
             <CssBaseline />
             <Container sx={{ width: "98%", textAlign: "left" }}>

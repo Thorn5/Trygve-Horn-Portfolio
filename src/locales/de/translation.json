@@ -53,10 +53,7 @@
     },
     "Landing": {
         "Loading": "Die Seite wird geladen...",
-        "errorEnglishIp": "Englisch Standortfehler:",
-        "errorGermanIp": "Deutsch Standortfehler:",
-        "errorEnglishWeather": "Englisch Wetterfehler:",
-        "errorGermanWeather": "Deutsch Wetterfehler:",
+        "error": "Hmm, bei der ersten Datenabfrage ist etwas schiefgelaufen. Bitte benutzen Sie das Hamburger-Menü oben links, um durch die Website zu navigieren. Der Rest der Website sollte einwandfrei funktionieren.",
         "Welcome": "Willkommen in meinem Portfolio!",
         "DisplayLocation": "Ihre IP-Adresse deutet darauf hin, dass Sie sich in oder in der Nähe von ",
         "DisplayTime": "aufhalten, wo die Zeit ist",

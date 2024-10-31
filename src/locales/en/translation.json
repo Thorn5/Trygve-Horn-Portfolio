@@ -53,10 +53,7 @@
     },
     "Landing": {
         "Loading": "Loading...",
-        "errorEnglishIp": "English Location error:",
-        "errorGermanIp": "German Location error:",
-        "errorEnglishWeather": "English Weather error:",
-        "errorGermanWeather": "German Weather error:",
+        "error": "Hmm, something has gone wrong with initial data fetch. Please use the hamburger menu on the top left to navigate the site. The rest of the website should work fine.",
         "Welcome": "Welcome to my Portfolio!",
         "DisplayLocation": "Your IP address suggests that you are in or near ",
         "DisplayTime": "where the time is",
