@@ -33,14 +33,39 @@ export const Projects = () => {
             target="_blank"
             rel="noopener noreferrer">
             {t("Projects.ShowMyIp")}
-          </a></p>
-        <p>{t("Projects.ShowMyIpGitHub")}{" "}
+          </a>
+          {t("Projects.ShowMyIpConnector")}
           <a
             href="https://github.com/Thorn5/Show-My-IP-React-Vite"
             target="_blank"
             rel="noopener noreferrer">
-            {t("Projects.ShowMyIpGitHubLink")}
+        {t("Projects.ShowMyIpGitHub")}
           </a></p>
+          <p>
+          {t("Projects.BrewXotic")}
+          <a
+            href="https://brewxotic-frontend.onrender.com"
+            target="_blank"
+            rel="noopener noreferrer">
+        {t("Projects.BrewXoticLink")}
+          </a>
+          {t("Projects.BrewXoticConnector")}
+          <a
+            href="https://github.com/Thorn5/BrewXotic-Frontend"
+            target="_blank"
+            rel="noopener noreferrer">
+        {t("Projects.BrewXoticFrontEnd")}
+          </a>
+          {t("Projects.BrewXoticConnector2")}
+          <a
+            href="https://github.com/Thorn5/BrewXotic-Backend"
+            target="_blank"
+            rel="noopener noreferrer">
+        {t("Projects.BrewXoticBackEnd")}
+          </a>
+          {t("Projects.BrewXoticConclude")}
+          </p>
+          <p>{t("Projects.BrewXoticWarning")}</p>
       </div >
     </>
   )

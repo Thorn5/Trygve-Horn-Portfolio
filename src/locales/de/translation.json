@@ -77,9 +77,17 @@
         "FocusFinish": "dieses Portfolios zu untersuchen.",
         "Plans": "Sobald dieses Portfolio vollständig ausgearbeitet ist, werde ich meine interessantesten Arbeiten wiederherstellen und neue Miniprojekte erstellen, um meine Fähigkeiten weiter zu entwickeln und zu präsentieren.",
         "CurrentStatus": "Bis die Wiederherstellung abgeschlossen ist, lade ich Sie ein, sich meine eigene Nachbildung eines Gruppenprojekts aus meinem Bootcamp anzusehen:",
-        "ShowMyIp": "Show My IP",
-        "ShowMyIpGitHub": "GitHub-Repository für Show My IP:",
-        "ShowMyIpGitHubLink": "https://github.com/Thorn5/Show-My-IP-React-Vite"
+        "ShowMyIp": "Show My IP ",
+        "ShowMyIpConnector": "oder das ",
+        "ShowMyIpGitHub": "GitHub-Repository für Show My IP.",
+        "BrewXotic": "Sie können auch mein Bootcamp-Miniprojekt ansehen: ",
+        "BrewXoticLink": "den BrewXotic Online-Shop",
+        "BrewXoticConnector": ", sowie das ",
+        "BrewXoticFrontEnd": "Frontend-GitHub-Repo ",
+        "BrewXoticConnector2": "oder das ",
+        "BrewXoticBackEnd": "Backend-GitHub-Repo ",
+        "BrewXoticConclude": "für BrewXotic.",
+        "BrewXoticWarning": "Bitte haben Sie Geduld! Die Datenbank kann einige Zeit in Anspruch nehmen, um hochgefahren zu werden."
     },
     "TrygveHornCV": {
         "TrygveHornCV": "Lebenslauf"

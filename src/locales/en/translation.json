@@ -77,9 +77,17 @@
         "FocusFinish": "for this portfolio.",
         "Plans": "Once this portfolio is fully fleshed out, I will restore my most interesting work, and create new mini projects to further develop and showcase my skills.",
         "CurrentStatus": "Until the restoration is complete, I invite you to look at my own recreation of a group project from my bootcamp:",
-        "ShowMyIp": "Show My IP",
-        "ShowMyIpGitHub": "GitHub Repo for Show My IP:",
-        "ShowMyIpGitHubLink": "https://github.com/Thorn5/Show-My-IP-React-Vite"
+        "ShowMyIp": "Show My IP ",
+        "ShowMyIpConnector": "or the ",
+        "ShowMyIpGitHub": "GitHub Repo for Show My IP.",
+        "BrewXotic": "You can also view my bootcamp mini project: ",
+        "BrewXoticLink": "BrewXotic online store",
+        "BrewXoticConnector": ", as well as the ",
+        "BrewXoticFrontEnd": "frontend GitHub Repo ",
+        "BrewXoticConnector2": "or the ",
+        "BrewXoticBackEnd": "backend GitHub Repo ",
+        "BrewXoticConclude": "for BrewXotic.",
+        "BrewXoticWarning": "Please be patient! The database can take some time to spin-up."
     },
     "TrygveHornCV": {
         "TrygveHornCV": "TrygveHornCV in English"
