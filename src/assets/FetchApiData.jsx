@@ -234,21 +234,8 @@ export const FetchApiData = () => {
             setWeatherData_de(weatherData_de_Stringify);
 
         } catch (error) {
-            // if (error.message.includes("ipUrl")) {
-            //     setIpError_en(error);
-            //     console.error("Error fetching English IP data:", error);
-            // } else if (error.message.includes("ipUrl_de")) {
-            //     setIpError_de(error);
-            //     console.error("Error fetching German IP data:", error);
-            // } else if (error.message.includes("weatherUrl")) {
-            //     setWeatherError_en(error);
-            //     console.error("Error fetching English weather data:", error);
-            // } else if (error.message.includes("weatherUrl_de")) {
-            //     setWeatherError_de(error);
-            //     console.error("Error fetching German weather data:", error);
-            // }
-            // console.log("Error:", error);
             setError(error.message);
+            console.log("Error:", error);
         } finally {
             setLoading(false);
             // Set final session storage items
@@ -415,10 +402,6 @@ export const FetchApiData = () => {
 
     return {
         error,
-        /*         ipError_en,
-                ipError_de,
-                weatherError_en,
-                weatherError_de, */
         ipData_en,
         ipData_de,
         weatherData_en,

@@ -87,10 +87,6 @@ export const Landing = () => {
   const siteBaseUrl = import.meta.env.VITE_APP_SITE_URL_STUB;
   const {
     error,
-    // ipError_en,
-    // ipError_de,
-    // weatherError_en,
-    // weatherError_de,
     ipData_en,
     ipData_de,
     weatherData_en,
