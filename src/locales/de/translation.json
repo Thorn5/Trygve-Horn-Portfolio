@@ -27,7 +27,7 @@
         "ComponentLibraryText": "Dieses Portfolio-Projekt wurde mit Material UI entwickelt - einer Open-Source-React-Komponentenbibliothek, die Googles Material Design umsetzt. Material UI ist eine opinionated Bibliothek, die Entwicklern spezifische Designmuster und architektonische Entscheidungen auferlegt. Obwohl ich es vorziehe, mit unopinionated Bibliotheken zu arbeiten, entschied ich mich für dieses Projekt für eine restriktivere Bibliotheksart.",
         "ApiHook": "API-Fetch Hook",
         "ApiHookText": "Der API-Fetch Hook verwendet verkettete Aufrufe, um den Standort des Benutzers auf Englisch und dann auf Deutsch zu ermitteln, verarbeitet dann die Standortdaten und implementiert einen weiteren verketteten Fetch, um die aktuellen Wetterbedingungen auf Englisch und dann auf Deutsch für den scheinbaren Standort des Benutzers zu erhalten. Die Standortdaten wurden auch verwendet, um die lokale Zeit am Standort des Benutzers zu bestimmen, die auf der Landingpage angezeigt wird.",
-        "ApiHookText2": "Die Codebasis enthält sowohl Code für Fetch/Catch als auch für Async/Await API-Aufrufe.",
+        "ApiHookText2": "Die Codebasis enthält sowohl Code für Try/Catch als auch für Async/Await API-Aufrufe.",
         "Themes": "Themes",
         "ThemesText": "Ich wendete zwei Themes auf das Projekt an; eines für die App Bar am oberen Rand der Seite und ein zweites für den Inhalt des Hauptteils. Dies ermöglicht es mir, bei Bedarf verschiedene Themes auf die Schlüsselbereiche der Seite anzuwenden.",
         "LanguageSelection": "Sprachauswahl",
